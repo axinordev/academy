@@ -1,10 +1,17 @@
 import React from 'react';
 import Video from '../assets/images/video.svg'; // replace with actual path
 import Arrow from '../assets/images/arrow.svg'; // import arrow icon
+import bg1 from '../assets/images/about_bg.svg'
 
 const About = () => {
   return (
-    <section id="about" className="py-12 bg-[#F0FFFF]">
+  <section
+  id="about"
+  className="py-12 bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${bg1})` }}
+>
+
+
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-start gap-8">
 
