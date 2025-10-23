@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 
 const Navbar = () => {
@@ -6,11 +7,9 @@ const Navbar = () => {
 
   return (
     <div className="bg-[#F0FFFF]">
-      {/* Navbar */}
       <nav className="bg-[#F0FFFF] w-full fixed top-0 left-0 z-50">
         <div className="flex items-center justify-between relative h-[70px] px-4 md:px-10 overflow-hidden">
-          
-          {/* Cropped & Shifted Logo */}
+          {/* Logo */}
           <div className="absolute top-0 left-0 w-[200px] h-[200px] overflow-hidden -translate-y-10">
             <img
               src={logo}
@@ -19,23 +18,23 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Desktop Menu - Center */}
+          {/* Desktop Menu */}
           <ul className="hidden md:flex items-center space-x-8 text-black font-normal mx-auto">
             <li>
-              <a
-                href="#Header"
+              <Link
+                to="/"
                 className="hover:underline hover:underline-offset-4 hover:text-pink-500 transition"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#Course"
+              <Link
+                to="/courses"
                 className="hover:underline hover:underline-offset-4 hover:text-pink-500 transition"
               >
-                Course
-              </a>
+                Courses
+              </Link>
             </li>
             <li>
               <a
@@ -63,11 +62,11 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Enquire Now Button - Right */}
+          {/* Enquire Now Button */}
           <div className="hidden md:block flex-shrink-0">
             <a
               href="#Enquire"
-              className="bg-pink-500 text-white px-6 py-2 rounded-full font-normal "
+              className="bg-pink-500 text-white px-6 py-2 rounded-full font-normal"
             >
               Enquire Now
             </a>
@@ -100,20 +99,22 @@ const Navbar = () => {
         {isOpen && (
           <ul className="md:hidden bg-[#F0FFFF] text-black px-6 py-4 space-y-4 mt-[120px]">
             <li>
-              <a
-                href="#Header"
+              <Link
+                to="/"
+                onClick={() => setIsOpen(false)}
                 className="hover:underline hover:underline-offset-4 hover:text-pink-500 block transition"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#Course"
+              <Link
+                to="/courses"
+                onClick={() => setIsOpen(false)}
                 className="hover:underline hover:underline-offset-4 hover:text-pink-500 block transition"
               >
-                Course
-              </a>
+                Courses
+              </Link>
             </li>
             <li>
               <a
@@ -125,26 +126,10 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#Events"
+                href="#Contact"
                 className="hover:underline hover:underline-offset-4 hover:text-pink-500 block transition"
               >
-                Events
-              </a>
-            </li>
-            <li>
-              <a
-                href="#Contact"
-                className="hover:underline hover:underline-offset-4 hover:text-[#F5276C] block transition"
-              >
                 Contact Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="#Enquire"
-                className="bg-[#F5276C] text-white px-6 py-2 rounded-full font-normal hover:underline hover:underline-offset-4 transition block text-center"
-              >
-                Enquire Now
               </a>
             </li>
           </ul>
