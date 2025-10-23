@@ -1,31 +1,34 @@
 import React from "react";
-import logo from "../assets/images/logo1.svg";
 import navbg from "../assets/images/navbg.svg";
 
 const MernCourse = () => {
   return (
-    <section
-      className="bg-cover bg-center bg-no-repeat min-h-[60vh] flex flex-col"
-      style={{ backgroundImage: `url(${navbg})` }}
-    >
-      {/* ===== Navbar ===== */}
-      <div className="flex justify-between items-center px-6 md:px-12 py-6">
-        {/* Logo */}
-        <img src={logo} alt="Logo" className="w-36 md:w-44" />
+    <>
+      {/* Hero Section */}
+      <section
+        className="bg-cover bg-center bg-no-repeat min-h-[40vh] flex flex-col px-6 md:px-12"
+        style={{ backgroundImage: `url(${navbg})` }}
+      >
+        {/* Heading */}
+        <div className="flex items-center flex-grow">
+          <h1 className="text-3xl md:text-5xl font-semibold text-white font-Poppins max-w-lg">
+            MERN Stack Development
+          </h1>
+        </div>
+      </section>
 
-        {/* Enquire Now Button */}
-        <button className="bg-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-700 transition">
-          Enquire Now
-        </button>
-      </div>
+      {/* Next Section */}
+      <section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-6 md:px-12">
+    <div className="max-w-3xl">
+      <p className="text-gray-800 text-lg md:text-xl font-Poppins leading-relaxed text-left">
+        Build dynamic web applications using MongoDB, Express, React, and Node.js — the most in-demand full-stack technology. This course is designed to help learners gain practical skills in modern full-stack web development. You’ll build real-world projects, learn database handling, front-end frameworks, and back-end logic integration — all under the guidance of experienced mentors from Axinor Technologies.
+      </p>
+    </div>
+  </div>
+</section>
 
-      {/* ===== Heading ===== */}
-      <div className="flex-grow flex items-center justify-center text-center">
-        <h1 className="text-4xl md:text-6xl font-semibold text-white font-Poppins">
-          MERN Stack Development
-        </h1>
-      </div>
-    </section>
+    </>
   );
 };
 
