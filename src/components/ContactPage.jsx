@@ -1,7 +1,5 @@
 import React from "react";
-import mernImg from "../assets/images/mern.svg";
-import flutterImg from "../assets/images/flutter.svg";
-import cyberImg from "../assets/images/cyber.svg";
+
 import arrowIcon from "../assets/images/arrow.svg";
 import bgCourse from "../assets/images/CourseBg.svg";
 import logo from "../assets/images/logo2.svg"; // add your logo path
@@ -9,31 +7,9 @@ import locationIcon from "../assets/images/location_icon.png"; // add your locat
 import phoneIcon from "../assets/images/phone_icon.png"; // add your phone icon
 import mailIcon from "../assets/images/mail_icon.png"; // add your mail icon
 
-const courses = [
-  {
-    img: mernImg,
-    title: "MERN Stack Development",
-    duration: "3 Months",
-    level: "Beginner to Advanced",
-    includes: "Live Projects & Mentorship",
-  },
-  {
-    img: flutterImg,
-    title: "Flutter Development",
-    duration: "3 Months",
-    level: "Beginner Friendly",
-    includes: "UI/UX Integration + Live App Projects",
-  },
-  {
-    img: cyberImg,
-    title: "Cyber Security",
-    duration: "3 Months",
-    level: "Intermediate",
-    includes: "Ethical Hacking & Security Tools",
-  },
-];
 
-const CoursesPage = () => {
+
+const ContactPage = () => {
   return (
     <section
       className="bg-cover bg-center bg-no-repeat min-h-screen pt-[100px]"
@@ -46,66 +22,15 @@ const CoursesPage = () => {
         {/* Heading */}
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-bold font-Poppins leading-tight">
-            Explore Our <span className="text-pink-500">Professional IT</span>{" "}
-            <br />
-            Training Programs
+            Let's <span className="text-pink-500">Connect</span>{" "}
+            
           </h1>
           <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
-            Learn modern technologies through hands-on, industry-based courses
-            designed by experts at Axinor Technologies.
+            Have questions about our courses, admissions, or training programs?<br/>
+             Reach out to us — our team will guide you every step of the way.
           </p>
         </div>
-
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {["Featured", "Coding", "Design", "Marketing"].map((tag) => (
-            <button
-              key={tag}
-              className="px-5 py-2 rounded-full text-sm font-medium border border-gray-400 text-black bg-transparent hover:bg-sky-400 hover:text-white hover:border-sky-400 transition"
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
-
-        {/* Course Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-20">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className="rounded-2xl shadow-lg hover:shadow-xl transition p-5 border border-white/30 bg-white/40 backdrop-blur-md flex flex-col justify-center"
-            >
-              <img
-                src={course.img}
-                alt={course.title}
-                className="rounded-xl w-full object-contain h-48 mb-5"
-              />
-              <div className="text-left px-1 text-black">
-                <div className="flex justify-between items-center">
-                  <h3 className="font-semibold text-lg">{course.title}</h3>
-                  <p className="text-sm text-gray-500">{course.duration}</p>
-                </div>
-                <p className="text-sm text-gray-600 mt-3">
-                  <span className="font-medium">Level:</span> {course.level}
-                </p>
-                <p className="text-sm text-gray-600 mt-1">
-                  <span className="font-medium">Includes:</span> {course.includes}
-                </p>
-
-                {/* Arrow Button */}
-                <div className="mt-4 flex justify-end">
-                  <button className="w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e] transition">
-                    <img
-                      src={arrowIcon}
-                      alt="arrow icon"
-                      className="w-4 h-4 object-contain"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        
       </div>
 
       {/* Top Footer / Contact Section */}
@@ -214,4 +139,4 @@ const CoursesPage = () => {
   );
 };
 
-export default CoursesPage;
+export default ContactPage;

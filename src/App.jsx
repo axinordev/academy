@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonials";
 import ContactSection from "./components/ContactSection";
 import Mentors from "./components/Mentors";
 import CoursesPage from "./components/CoursePage";
+import ContactPage from "./components/ContactPage";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );

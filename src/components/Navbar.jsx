@@ -53,12 +53,12 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#Contact"
+              <Link
+                to="/contact"
                 className="hover:underline hover:underline-offset-4 hover:text-pink-500 transition"
               >
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
 
