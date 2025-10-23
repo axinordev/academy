@@ -8,6 +8,7 @@ import logo from "../assets/images/logo2.svg"; // add your logo path
 import locationIcon from "../assets/images/location_icon.png"; // add your location icon
 import phoneIcon from "../assets/images/phone_icon.png"; // add your phone icon
 import mailIcon from "../assets/images/mail_icon.png"; // add your mail icon
+import { useNavigate } from "react-router-dom";
 
 const courses = [
   {
@@ -34,6 +35,7 @@ const courses = [
 ];
 
 const CoursesPage = () => {
+  const navigate = useNavigate(); // Add this inside your component
   return (
     <section
       className="bg-cover bg-center bg-no-repeat min-h-screen pt-[100px]"
@@ -71,141 +73,57 @@ const CoursesPage = () => {
         {/* Course Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-20">
           {courses.map((course, index) => (
-            <div
-              key={index}
-              className="rounded-2xl shadow-lg hover:shadow-xl transition p-5 border border-white/30 bg-white/40 backdrop-blur-md flex flex-col justify-center"
+      <div
+        key={index}
+        className="rounded-2xl shadow-lg hover:shadow-xl transition p-5 border border-white/30 bg-white/40 backdrop-blur-md flex flex-col justify-center"
+      >
+        <img
+          src={course.img}
+          alt={course.title}
+          className="rounded-xl w-full object-contain h-48 mb-5"
+        />
+        <div className="text-left px-1 text-black">
+          <div className="flex justify-between items-center">
+            <h3 className="font-semibold text-lg">{course.title}</h3>
+            <p className="text-sm text-gray-500">{course.duration}</p>
+          </div>
+          <p className="text-sm text-gray-600 mt-3">
+            <span className="font-medium">Level:</span> {course.level}
+          </p>
+          <p className="text-sm text-gray-600 mt-1">
+            <span className="font-medium">Includes:</span> {course.includes}
+          </p>
+
+          {/* Arrow Button */}
+          <div className="mt-4 flex justify-end">
+            <button
+              className="w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e] transition"
+              onClick={() => {
+                // Navigate based on course title
+                if (course.title === "MERN Stack Development") {
+                  navigate("/mern-course");
+                } else if (course.title === "Flutter Development") {
+                  navigate("/flutter-course");
+                } else if (course.title === "Cyber Security") {
+                  navigate("/cyber-course");
+                }
+              }}
             >
               <img
-                src={course.img}
-                alt={course.title}
-                className="rounded-xl w-full object-contain h-48 mb-5"
+                src={arrowIcon}
+                alt="arrow icon"
+                className="w-4 h-4 object-contain"
               />
-              <div className="text-left px-1 text-black">
-                <div className="flex justify-between items-center">
-                  <h3 className="font-semibold text-lg">{course.title}</h3>
-                  <p className="text-sm text-gray-500">{course.duration}</p>
-                </div>
-                <p className="text-sm text-gray-600 mt-3">
-                  <span className="font-medium">Level:</span> {course.level}
-                </p>
-                <p className="text-sm text-gray-600 mt-1">
-                  <span className="font-medium">Includes:</span> {course.includes}
-                </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    ))}
 
-                {/* Arrow Button */}
-                <div className="mt-4 flex justify-end">
-                  <button className="w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e] transition">
-                    <img
-                      src={arrowIcon}
-                      alt="arrow icon"
-                      className="w-4 h-4 object-contain"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 
-<section className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-        {/* Left: Contact Info */}
-        <div className="bg-[#0B1120] text-white rounded-2xl p-8 shadow-lg">
-          <h3 className="text-2xl font-semibold mb-6">Contact Info</h3>
-          <ul className="space-y-4 text-gray-300">
-            <li>
-              <strong>Address:</strong> Axinor Technologies, Kozhikode, Kerala
-            </li>
-            <li>
-              <strong>Phone:</strong> +91 9XXXX XXXXX
-            </li>
-            <li>
-              <strong>Email:</strong> info@axinoracademy.com
-            </li>
-            <li>
-              <strong>Hours:</strong> 9:30 AM – 6:30 PM
-            </li>
-          </ul>
-        </div>
 
-        {/* Right: Send Message */}
-        <div className="bg-white rounded-2xl shadow-md p-8">
-          <h3 className="text-2xl font-semibold mb-6">Send Us a Message</h3>
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500"
-            />
-            <input
-              type="text"
-              placeholder="Course"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500"
-            />
-            <textarea
-              rows="4"
-              placeholder="Message"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500"
-            ></textarea>
-            <button className="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition">
-              Submit
-            </button>
-          </form>
-        </div>
-      </section>
-
-      {/* ====== Visit Our Office Section ====== */}
-      <section className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-        {/* Left: Address Info */}
-        <div className="bg-gradient-to-r from-blue-50 to-white rounded-2xl p-8 shadow-md">
-          <h4 className="text-blue-600 font-semibold mb-2">Visit Our Office</h4>
-          <p className="text-gray-700 mb-4">
-            We'd love to meet you in person at our Kozhikode office.
-          </p>
-          <p className="text-gray-600">
-            <strong>Address:</strong> Hilite Business Park – Tower 3, 7th Floor,
-            GMR-5255, Kozhikode, Kerala 673014
-          </p>
-        </div>
-
-        {/* Right: Map */}
-        <div className="rounded-2xl overflow-hidden shadow-md">
-          <img src={mapImg} alt="Map" className="w-full h-full object-cover" />
-        </div>
-      </section>
-
-      {/* ====== Call-to-Action Section ====== */}
-      <section className="container mx-auto px-6 md:px-12">
-        <div className="bg-gradient-to-r from-[#4B4EF9] to-[#B94BF9] rounded-2xl flex flex-col md:flex-row justify-between items-center text-white p-10 md:p-14 shadow-lg">
-          {/* Left Text */}
-          <div className="mb-6 md:mb-0 max-w-lg">
-            <h3 className="text-3xl font-semibold mb-3">
-              Ready to Begin Your Learning Journey?
-            </h3>
-            <p className="text-gray-100 mb-4">
-              Take our expertly curated courses and discover the best version of
-              yourself.
-            </p>
-            <button className="bg-white text-pink-600 px-6 py-2 rounded-full font-semibold hover:opacity-90 transition">
-              Contact Our Team
-            </button>
-          </div>
-
-          {/* Right Image */}
-          <div className="w-full md:w-[300px]">
-            <img
-              src={studentImg}
-              alt="Student"
-              className="rounded-2xl object-cover"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* Top Footer / Contact Section */}
       <div className="bg-[#0B1120] w-full p-10 text-white flex flex-col lg:flex-row justify-between items-center gap-10">
