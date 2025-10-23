@@ -108,6 +108,105 @@ const CoursesPage = () => {
         </div>
       </div>
 
+<section className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        {/* Left: Contact Info */}
+        <div className="bg-[#0B1120] text-white rounded-2xl p-8 shadow-lg">
+          <h3 className="text-2xl font-semibold mb-6">Contact Info</h3>
+          <ul className="space-y-4 text-gray-300">
+            <li>
+              <strong>Address:</strong> Axinor Technologies, Kozhikode, Kerala
+            </li>
+            <li>
+              <strong>Phone:</strong> +91 9XXXX XXXXX
+            </li>
+            <li>
+              <strong>Email:</strong> info@axinoracademy.com
+            </li>
+            <li>
+              <strong>Hours:</strong> 9:30 AM – 6:30 PM
+            </li>
+          </ul>
+        </div>
+
+        {/* Right: Send Message */}
+        <div className="bg-white rounded-2xl shadow-md p-8">
+          <h3 className="text-2xl font-semibold mb-6">Send Us a Message</h3>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500"
+            />
+            <input
+              type="text"
+              placeholder="Course"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500"
+            />
+            <textarea
+              rows="4"
+              placeholder="Message"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500"
+            ></textarea>
+            <button className="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition">
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* ====== Visit Our Office Section ====== */}
+      <section className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        {/* Left: Address Info */}
+        <div className="bg-gradient-to-r from-blue-50 to-white rounded-2xl p-8 shadow-md">
+          <h4 className="text-blue-600 font-semibold mb-2">Visit Our Office</h4>
+          <p className="text-gray-700 mb-4">
+            We'd love to meet you in person at our Kozhikode office.
+          </p>
+          <p className="text-gray-600">
+            <strong>Address:</strong> Hilite Business Park – Tower 3, 7th Floor,
+            GMR-5255, Kozhikode, Kerala 673014
+          </p>
+        </div>
+
+        {/* Right: Map */}
+        <div className="rounded-2xl overflow-hidden shadow-md">
+          <img src={mapImg} alt="Map" className="w-full h-full object-cover" />
+        </div>
+      </section>
+
+      {/* ====== Call-to-Action Section ====== */}
+      <section className="container mx-auto px-6 md:px-12">
+        <div className="bg-gradient-to-r from-[#4B4EF9] to-[#B94BF9] rounded-2xl flex flex-col md:flex-row justify-between items-center text-white p-10 md:p-14 shadow-lg">
+          {/* Left Text */}
+          <div className="mb-6 md:mb-0 max-w-lg">
+            <h3 className="text-3xl font-semibold mb-3">
+              Ready to Begin Your Learning Journey?
+            </h3>
+            <p className="text-gray-100 mb-4">
+              Take our expertly curated courses and discover the best version of
+              yourself.
+            </p>
+            <button className="bg-white text-pink-600 px-6 py-2 rounded-full font-semibold hover:opacity-90 transition">
+              Contact Our Team
+            </button>
+          </div>
+
+          {/* Right Image */}
+          <div className="w-full md:w-[300px]">
+            <img
+              src={studentImg}
+              alt="Student"
+              className="rounded-2xl object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Top Footer / Contact Section */}
       <div className="bg-[#0B1120] w-full p-10 text-white flex flex-col lg:flex-row justify-between items-center gap-10">
         {/* Left Content */}
@@ -119,7 +218,7 @@ const CoursesPage = () => {
           </div>
           <h3 className="text-3xl font-semibold mb-3">Get In Touch</h3>
           <p className="text-gray-300 mb-6 max-w-md">
-            Have questions about our courses or training programs? Our team is
+            Have questions about our courses or training programs? <br/>Our team is
             here to help you every step of the way.
           </p>
           <button className="bg-pink-500 px-6 py-2 rounded-full font-semibold hover:bg-pink-600 transition">
