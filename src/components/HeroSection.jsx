@@ -3,6 +3,7 @@ import womanLap from '../assets/images/woman-laptop.svg';
 import icon from '../assets/images/icon.png';
 import whatsappIcon from '../assets/images/whatsapp_icon.svg';
 import bg1 from '../assets/images/herosection_bg.svg'
+import bg2 from '../assets/images/herSecBg.svg'
 
 const HeroSection = () => {
   return (
@@ -10,7 +11,7 @@ const HeroSection = () => {
       <section
         id="about"
         className="py-12 bg-cover bg-center bg-no-repeat min-h-screen pt-[90px]"
-        style={{ backgroundImage: `url(${bg1})` }}
+        style={{ backgroundImage: `url(${bg2})` }}
       >
       <div className="container mx-auto px-4">
         
