@@ -122,13 +122,13 @@ const ContactPage = () => {
 
       {/* Call-to-Action */}
 <section className="container mx-auto px-6 md:px-12 mb-20 relative">
-  <div className="bg-gradient-to-r from-[#4B4EF9] to-[#d7d5f7] rounded-2xl flex flex-col md:flex-row justify-between items-center text-white p-10 md:p-14 shadow-lg relative">
+  <div className="bg-gradient-to-r from-[#4B4EF9] to-[#d7d5f7] rounded-2xl flex flex-col md:flex-row justify-between items-start text-white p-6 md:p-10 shadow-lg relative overflow-visible h-[220px] md:h-[280px]">
     {/* Left Text */}
-    <div className="mb-6 md:mb-0 max-w-lg z-10">
-      <h3 className="text-3xl font-semibold mb-3">
+    <div className="mb-4 md:mb-0 max-w-lg z-10">
+      <h3 className="text-2xl md:text-3xl font-semibold mb-2">
         Ready to Begin Your Learning Journey?
       </h3>
-      <p className="text-gray-100 mb-4">
+      <p className="text-gray-100 mb-3">
         Talk to our academic advisors and discover the best <br />
         course path for you.
       </p>
@@ -138,7 +138,7 @@ const ContactPage = () => {
     </div>
 
     {/* Right Image */}
-    <div className="w-full md:w-[500px] -mt-20 md:-mt-32 relative z-10 md:translate-x-16 lg:translate-x-32 ">
+    <div className="w-full md:w-[500px] relative z-10 md:translate-x-16 lg:translate-x-32 -mt-[100px]">
   <img
     src={studentImg}
     alt="Student"
@@ -148,6 +148,7 @@ const ContactPage = () => {
 
   </div>
 </section>
+
 
 
       {/* Footer */}
