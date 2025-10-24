@@ -1,6 +1,6 @@
 import React from "react";
 import arrowIcon from "../assets/images/icon4.svg";
-import bgCourse from "../assets/images/CourseBg.svg";
+import bgCourse from "../assets/images/courseBg.svg";
 import logo from "../assets/images/logo2.svg";
 import locationIcon from "../assets/images/location_icon.png";
 import phoneIcon from "../assets/images/phone_icon.png";
