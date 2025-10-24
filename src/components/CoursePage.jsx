@@ -3,7 +3,7 @@ import mernImg from "../assets/images/mern.svg";
 import flutterImg from "../assets/images/flutter.svg";
 import cyberImg from "../assets/images/cyber.svg";
 import arrowIcon from "../assets/images/arrow.svg";
-import bgCourse from "../assets/images/CourseBg.svg";
+import bgCourse from "../assets/images/coursebg.svg";
 import logo from "../assets/images/logo2.svg"; // add your logo path
 import locationIcon from "../assets/images/location_icon.png"; // add your location icon
 import phoneIcon from "../assets/images/phone_icon.png"; // add your phone icon
