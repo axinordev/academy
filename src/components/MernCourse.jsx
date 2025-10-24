@@ -162,27 +162,27 @@ const MernCourse = () => {
               </div>
             </div>
 
-            {/* Mentors Section */}
-<div className="mt-12 relative flex flex-col items-center">
-  <h2 className="text-2xl md:text-3xl font-semibold text-blue-700 font-Poppins mb-6">
+   {/* Mentors Section */}
+<div className="mt-12 relative flex flex-col items-center px-4 md:px-0">
+  <h2 className="text-2xl md:text-3xl font-semibold text-blue-700 font-Poppins mb-6 text-center">
     Mentors
   </h2>
 
   {/* Outer container for arrows + card */}
-  <div className="relative flex items-center justify-center w-full md:w-[550px] mx-auto">
+  <div className="relative flex items-center justify-center w-full md:w-[550px] mx-auto overflow-visible">
 
-    {/* Backward Arrow (left side outside the card) */}
+    {/* Left Arrow */}
     <img
       src={b1}
       alt="Previous"
       onClick={prevMentor}
-      className="absolute left-[-70px] top-1/2 transform -translate-y-1/2 w-12 h-12 cursor-pointer opacity-90 hover:opacity-100 transition"
+      className="absolute left-[-10px] md:left-[-70px] top-1/2 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 cursor-pointer opacity-90 hover:opacity-100 transition z-10"
     />
 
-    {/* Transparent Mentor Card */}
-    <div className="flex flex-col items-center bg-transparent border border-gray-300 rounded-2xl p-6 w-full md:w-[450px] shadow-lg text-center backdrop-blur-md">
+    {/* Mentor Card */}
+    <div className="flex flex-col items-center bg-white border border-gray-300 rounded-2xl p-6 w-full md:w-[450px] shadow-lg text-center relative">
       {/* Mentor Image */}
-      <div className="w-full h-[420px] rounded-xl flex items-center justify-center">
+      <div className="w-full h-[300px] md:h-[420px] rounded-xl flex items-center justify-center overflow-hidden">
         <img
           src={mentor.img}
           alt={mentor.name}
@@ -190,7 +190,7 @@ const MernCourse = () => {
         />
       </div>
 
-      {/* Name & Designation */}
+      {/* Name & Role */}
       <p className="text-gray-900 text-xl md:text-2xl font-Poppins font-semibold mt-4">
         {mentor.name}
       </p>
@@ -205,73 +205,86 @@ const MernCourse = () => {
       </div>
     </div>
 
-    {/* Forward Arrow (right side outside the card) */}
+    {/* Right Arrow */}
     <img
       src={f1}
       alt="Next"
       onClick={nextMentor}
-      className="absolute right-[-70px] top-1/2 transform -translate-y-1/2 w-12 h-12 cursor-pointer opacity-90 hover:opacity-100 transition"
+      className="absolute right-[-10px] md:right-[-70px] top-1/2 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 cursor-pointer opacity-90 hover:opacity-100 transition z-10"
     />
   </div>
-  {/* Duration & Fees Section */}
-<div className="mt-16 text-left w-full md:w-[900px] mx-auto">
-  <h2 className="text-2xl md:text-3xl font-semibold text-blue-700 font-Poppins mb-6">
+</div>
+
+{/* Duration & Fees Section */}
+<div className="mt-10 w-full md:w-[450px]">
+  <h2 className="text-2xl font-semibold text-blue-700 font-Poppins mb-4">
     Duration & Fees
   </h2>
 
-  {/* Two boxes side by side */}
-  <div className="flex flex-col md:flex-row justify-between items-start gap-6">
-    
-    {/* Duration Box */}
-    <div className="bg-blue-100 rounded-2xl p-6 shadow-md w-full md:w-[420px]">
-      <div className="flex flex-col space-y-3">
-        <div className="flex items-center gap-3">
-          <span className="w-3 h-3 rounded-full bg-blue-700"></span>
-          <span className="text-gray-900 font-semibold font-Poppins text-lg">Duration</span>
-        </div>
-        <div className="flex flex-col space-y-2 ml-7">
-          <div className="flex items-center gap-2">
-            <img src={arrowIcon} alt="Arrow" className="w-4 h-4" />
-            <span className="text-gray-800 font-Poppins">4 Months</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <img src={arrowIcon} alt="Arrow" className="w-4 h-4" />
-            <span className="text-gray-800 font-Poppins">5 Days In A Week</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <img src={arrowIcon} alt="Arrow" className="w-4 h-4" />
-            <span className="text-gray-800 font-Poppins">3 Hours Class</span>
-          </div>
-        </div>
-      </div>
+  <div className="flex gap-4">
+    {/* Duration Rectangle */}
+    <div className="bg-[#E0F2FF] p-4 rounded-xl shadow-md flex-1">
+      <ul className="text-gray-800 font-Poppins text-sm md:text-base space-y-2">
+        <li className="flex items-center gap-2">
+          <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+          <span className="text-gray-700 font-medium">Duration</span>
+        </li>
+        <li className="flex items-center gap-2 ml-4">
+          <img src={f1} alt="arrow" className="w-4 h-4" />
+          <span>4 Months</span>
+        </li>
+        <li className="flex items-center gap-2 ml-4">
+          <img src={f1} alt="arrow" className="w-4 h-4" />
+          <span>5 Days In A Week</span>
+        </li>
+        <li className="flex items-center gap-2 ml-4">
+          <img src={f1} alt="arrow" className="w-4 h-4" />
+          <span>3 Hours Class</span>
+        </li>
+      </ul>
     </div>
 
-    {/* Fees Box */}
-    <div className="bg-blue-100 rounded-2xl p-6 shadow-md w-full md:w-[420px]">
-      <div className="flex items-center gap-3">
-        <span className="w-3 h-3 rounded-full bg-blue-700"></span>
-        <span className="text-gray-900 font-semibold font-Poppins text-lg">Fees</span>
-      </div>
-      <div className="mt-4 ml-7 space-y-2">
-        <div className="flex items-center gap-2">
-          <img src={arrowIcon} alt="Arrow" className="w-4 h-4" />
-          <span className="text-gray-800 font-Poppins">₹ 25,000 (Full Course)</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <img src={arrowIcon} alt="Arrow" className="w-4 h-4" />
-          <span className="text-gray-800 font-Poppins">Installments Available</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <img src={arrowIcon} alt="Arrow" className="w-4 h-4" />
-          <span className="text-gray-800 font-Poppins">Includes Certificate</span>
-        </div>
-      </div>
+    {/* Fees Rectangle */}
+    <div className="bg-[#E0F2FF] p-4 rounded-xl shadow-md flex-1">
+      <ul className="text-gray-800 font-Poppins text-sm md:text-base space-y-2">
+        <li className="flex items-center gap-2">
+          <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+          <span className="text-gray-700 font-medium">Fees Structure</span>
+        </li>
+        <li className="flex items-center gap-2 ml-4">
+          <img src={f1} alt="arrow" className="w-4 h-4" />
+          <span>Offline :  30000</span>
+        </li>
+        <li className="flex items-center gap-2 ml-4">
+          <img src={f1} alt="arrow" className="w-4 h-4" />
+          <span>Online :  25000</span>
+        </li>
+      </ul>
     </div>
-
   </div>
 </div>
 
+{/* Start Your Learning Journey Section */}
+<div className="mt-12 w-full md:w-[450px] text-left">
+  {/* Heading */}
+  <h2 className="text-2xl md:text-3xl font-semibold text-blue-700 font-Poppins mb-4">
+    Start Your Learning Journey Today
+  </h2>
+
+  {/* Enquire Now Button */}
+  <button className="bg-pink-600 text-white font-Poppins font-medium px-6 py-3 rounded-3xl hover:bg-pink-700 transition mb-2">
+    Enquire Now
+  </button>
+
+  {/* Contact Now Link */}
+  <p className="text-gray-800 font-Poppins text-sm">
+    Have questions?{" "}
+    <a href="#contact" className="text-blue-700 font-medium hover:underline">
+      Contact Now
+    </a>
+  </p>
 </div>
+
 
           </div>
 
