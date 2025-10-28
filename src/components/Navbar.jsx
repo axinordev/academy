@@ -1,14 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo_main.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detect scroll to change background color
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="bg-transparent font-poppins">
-      <nav className="bg-transparent w-full fixed top-0 left-0 z-50">
-        <div className="flex items-center justify-start relative h-[100px] md:h-[120px] px-4 md:px-8 gap-40">
+    <div className="font-[Poppins]">
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white shadow-md" : "bg-[#F3F6F9]"
+        }`}
+      >
+        <div className="flex items-center justify-start relative h-[80px] md:h-[90px] px-4 md:px-8 gap-40">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
@@ -19,7 +38,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center space-x-10 text-[#222] font-normal ml-12">
+          <ul className="hidden md:flex items-center space-x-10 text-[#0F172A] font-normal ml-12">
             <li>
               <Link
                 to="/"
@@ -102,7 +121,7 @@ const Navbar = () => {
 
         {/* Mobile Dropdown Menu */}
         {isOpen && (
-          <ul className="md:hidden bg-[#F0FFFF] text-black px-6 py-6 space-y-4 mt-2 shadow-lg rounded-b-2xl font-normal">
+          <ul className="md:hidden bg-[#F0FFFF] text-[#0F172A] px-6 py-6 space-y-4 mt-2 shadow-lg rounded-b-2xl font-normal">
             <li>
               <Link
                 to="/"
