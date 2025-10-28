@@ -8,18 +8,18 @@ const Navbar = () => {
   return (
     <div className="bg-transparent font-poppins">
       <nav className="bg-transparent w-full fixed top-0 left-0 z-50">
-        <div className="flex items-center justify-between relative h-[100px] md:h-[120px] px-6 md:px-10">
+        <div className="flex items-center justify-start relative h-[100px] md:h-[120px] px-4 md:px-8 gap-40">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
               src={logo}
               alt="Logo"
-              className="object-contain w-[160px] md:w-[200px] h-auto mt-2 md:mt-0"
+              className="object-contain w-[140px] md:w-[160px] h-auto mt-2 md:mt-0"
             />
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center space-x-10 text-[#222] font-normal">
+          <ul className="hidden md:flex items-center space-x-10 text-[#222] font-normal ml-12">
             <li>
               <Link
                 to="/"

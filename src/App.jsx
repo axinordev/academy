@@ -19,9 +19,11 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <About />
+      
       <FeaturedCourses />
+      
       <Choose />
+      <About />
       <Testimonials />
       <Mentors />
       <ContactSection />
