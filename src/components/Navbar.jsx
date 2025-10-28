@@ -24,7 +24,8 @@ const Navbar = () => {
     <div className="font-[Poppins]">
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-md" : "bg-[#F3F6F9]"
+          isScrolled ? "bg-[rgba(255,255,255,0.2)] backdrop-blur-md shadow-md" : "bg-[#F3F6F9]"
+
         }`}
       >
         <div className="flex items-center justify-start relative h-[80px] md:h-[90px] px-4 md:px-8 gap-40">

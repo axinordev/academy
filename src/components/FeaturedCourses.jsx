@@ -24,7 +24,7 @@ const courses = [
     title: "Cyber Security",
     duration: "3 Months",
     level: "Intermediate",
-    includes: "Ethical Hacking & Security Tools",
+    includes: "ethical hacking",
   },
 ];
 
@@ -34,9 +34,7 @@ const FeaturedCourses = () => {
       className="bg-[#F3F6F9] py-14 font-['Poppins'] text-[#0F172A]"
       id="courses"
     >
-      {/* Added more left margin, slightly less padding overall */}
       <div className="w-full mx-auto pl-[60px] pr-[40px] text-center">
-
         {/* Section Heading */}
         <div className="mb-4">
           <p className="inline-block bg-[#EC489926] text-[#EC4899] px-3 py-[3px] rounded-md font-medium text-xs shadow-sm">
@@ -68,37 +66,42 @@ const FeaturedCourses = () => {
         </div>
 
         {/* Course Cards */}
-        {/* Reduced gap between cards (gap-2) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 justify-center">
-
           {courses.map((course, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-4 w-[360px] h-[360px] flex flex-col justify-between border border-[#C7DDF4]"
             >
-              <div>
-                <img
-                  src={course.img}
-                  alt={course.title}
-                  className="rounded-xl w-full h-[180px] object-cover mb-3 p-1"
-                />
-                <div className="text-left">
-                  <div className="flex justify-between items-center">
-                    <h3 className="font-normal text-lg">{course.title}</h3>
-                    <p className="text-sm">{course.duration}</p>
-                  </div>
-                  <p className="text-sm mt-3">
-                    <span className="font-medium">Level:</span> {course.level}
-                  </p>
-                  <p className="text-sm mt-1">
-                    <span className="font-medium">Includes:</span> {course.includes}
-                  </p>
-                </div>
+              {/* Course Image (reduced side padding) */}
+              <img
+                src={course.img}
+                alt={course.title}
+                className="rounded-xl w-full h-[180px] object-cover mb-3 px-[2px]"
+              />
+
+              {/* Title + Duration in same line */}
+              <div className="flex items-center justify-between text-left">
+                <h3 className="font-normal text-lg text-[#0F172A]">
+                  {course.title}
+                </h3>
+                <p className="text-sm text-[#6B7280] whitespace-nowrap ml-2">
+                  {course.duration}
+                </p>
               </div>
 
-              {/* Arrow Button */}
-              <div className="mt-4 flex justify-end">
-                <button className="w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e] hover:bg-[#e01d5e] hover:border-[#e01d5e] hover:shadow-md transition">
+              {/* Level + Includes + Arrow (same line) */}
+              <div className="flex justify-between items-center mt-3">
+                <div className="text-left text-[#6B7280] text-[13px] leading-snug">
+                  <p>
+                    <span className="font-medium">Level:</span> {course.level}
+                  </p>
+                  <p>
+                    <span className="font-medium">Includes:</span>{" "}
+                    {course.includes}
+                  </p>
+                </div>
+
+                <button className="w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e] hover:bg-[#e01d5e] hover:border-[#e01d5e] hover:shadow-md transition ml-2">
                   <img
                     src={arrowIcon}
                     alt="arrow icon"
