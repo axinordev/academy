@@ -1,5 +1,5 @@
 import React from 'react';
-import womanLap from '../assets/images/woman-laptop.svg';
+
 import icon from '../assets/images/group.svg';
 import whatsappIcon from '../assets/images/whatsapp_icon.svg';
 import bg2 from '../assets/images/bg2.png';
