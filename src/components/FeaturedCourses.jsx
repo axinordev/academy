@@ -31,7 +31,7 @@ const courses = [
 const FeaturedCourses = () => {
   return (
     <section
-      className="bg-[#F3F6F9] py-14 font-['Poppins'] text-[#0F172A]"
+      className="bg-[#F3F6F9] py-14 font-['Poppins'] text-[#0F172A] mt-52"
       id="courses"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-[60px] text-center">
