@@ -2,17 +2,24 @@ import React from 'react';
 import womanLap from '../assets/images/woman-laptop.svg';
 import icon from '../assets/images/icon.png';
 import whatsappIcon from '../assets/images/whatsapp_icon.svg';
-import bg2 from '../assets/images/herSecBg.svg';
+import bg2 from '../assets/images/bg2.png';
 
 const HeroSection = () => {
   return (
     <section
       id="hero"
       className="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center font-['Poppins']"
-      style={{ backgroundImage: `url(${bg2})` }}
+      
     >
+      <img
+        src={bg2}
+        alt="Background"
+        className="absolute top-0 left-0 w-full object-cover z-0 object-top"
+        
+      />
+      
       {/* Wrapper */}
-      <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between px-5 sm:px-10 lg:px-[40px] pt-[100px] sm:pt-[140px] lg:pt-[200px]">
+      <div className="w-full flex flex-col-reverse lg:flex-row z-10 items-center justify-between px-5 sm:px-10 lg:px-[40px] pt-[100px] sm:pt-[140px] lg:pt-[200px]">
 
         {/* Left Text Section */}
         <div className="lg:w-7/12 w-full bg-transparent rounded-2xl p-5 sm:p-6 lg:p-8 flex flex-col gap-5 text-center lg:text-left">
@@ -25,16 +32,16 @@ const HeroSection = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0F172A] leading-snug sm:leading-[3rem] md:leading-[3.8rem]">
-            Where <span className="text-[#EC4899]">Learning</span> Meets <br className="hidden sm:block" />
-            Real-World Innovation.
+          <h1 className="text-2xl sm:text-3xl md:text-[53px] lg:text-5xl font-semibold text-[#0F172A] leading-snug sm:leading-[3rem] md:leading-[80px]">
+           <span className='md:leading-[80px]'> Where <span className="text-[#EC4899]">Learning</span> Meets </span>
+            <span className='md:leading-[80px]'>Real-World Innovation<span className='text-[#3661DA]'>.</span></span>
           </h1>
 
           {/* Paragraph */}
           <p className="text-[#0F172A] text-[14px] sm:text-base leading-relaxed max-w-[650px] mx-auto lg:mx-0">
-            Join a new age learning platform built by Axinor Technologies — 
+            Join a new age learning platform built by Axinor Technologies — <br/>
             where practical skills, mentorship, and innovation come together 
-            to help you build a successful tech career.
+            to help you<br/> build a successful tech career.
           </p>
 
           {/* Buttons + Icon */}
@@ -58,13 +65,13 @@ const HeroSection = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="lg:w-5/12 w-full flex justify-center lg:justify-end mb-6 lg:mb-0">
+        {/* <div className="w-4/5 flex justify-center lg:justify-end mb-6 lg:mb-0">
           <img
             src={womanLap}
             alt="Woman with Laptop"
-            className="w-[260px] sm:w-[320px] md:w-[420px] lg:w-[560px] h-auto object-contain"
+            className="w-full h-full object-contain"
           />
-        </div>
+        </div> */}
       </div>
 
       {/* Floating WhatsApp Button */}

@@ -24,7 +24,7 @@ const Navbar = () => {
     <div className="font-[Poppins]">
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-[rgba(255,255,255,0.2)] backdrop-blur-md shadow-md" : "bg-[#F3F6F9]"
+          isScrolled ? "bg-[rgba(255,255,255,0.2)] backdrop-blur-md shadow-md" : "bg-transparent"
 
         }`}
       >
