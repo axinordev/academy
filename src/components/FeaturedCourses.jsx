@@ -30,8 +30,12 @@ const courses = [
 
 const FeaturedCourses = () => {
   return (
-    <section className="bg-[#F3F6F9] py-14 font-['Poppins'] text-[#0F172A]" id="courses">
-      <div className="container mx-auto px-6 text-center">
+    <section
+      className="bg-[#F3F6F9] py-14 font-['Poppins'] text-[#0F172A]"
+      id="courses"
+    >
+      {/* Added more left margin, slightly less padding overall */}
+      <div className="w-full mx-auto pl-[60px] pr-[40px] text-center">
 
         {/* Section Heading */}
         <div className="mb-4">
@@ -40,14 +44,12 @@ const FeaturedCourses = () => {
           </p>
         </div>
 
-        <h2 className="text-3xl md:text-4xl font-semibold mt-6 mb-6 text-[#0F172A]">
-  Our <span className="text-[#EC4899]">Featured</span> Courses
-</h2>
-
-
+        <h2 className="text-3xl md:text-4xl font-semibold mt-6 mb-6 text-[#0F172A] w-fit mx-auto">
+          Our <span className="text-[#EC4899]">Featured</span> Courses
+        </h2>
 
         <p className="max-w-2xl mx-auto mb-10 text-[15px] leading-relaxed">
-          Explore our most in-demand programs designed to help you gain hands-on 
+          Explore our most in-demand programs designed to help you gain hands-on
           <br />
           skills, real-world experience, and confidence to build your tech career.
         </p>
@@ -57,7 +59,7 @@ const FeaturedCourses = () => {
           {["Featured", "Coding", "Design", "Marketing"].map((item, idx) => (
             <button
               key={idx}
-              className="px-4 py-2 rounded-full text-sm font-normal border border-gray-400 text-[#0F172A] bg-transparent 
+              className="px-4 py-2 rounded-full text-sm font-normal border border-[#C7DDF4] text-[#0F172A] bg-transparent 
                          hover:bg-[#BCD8F1] hover:text-[#0F172A] hover:border-[#BCD8F1] transition"
             >
               {item}
@@ -66,19 +68,19 @@ const FeaturedCourses = () => {
         </div>
 
         {/* Course Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        {/* Reduced gap between cards (gap-2) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 justify-center">
+
           {courses.map((course, index) => (
             <div
               key={index}
-              className={`bg-white rounded-2xl shadow-md hover:shadow-lg transition p-4 w-[350px] h-[360px] flex flex-col justify-between 
-              ${index === 0 ? "-ml-8" : ""} 
-              ${index === 2 ? "ml-8" : ""}`}
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-4 w-[360px] h-[360px] flex flex-col justify-between border border-[#C7DDF4]"
             >
               <div>
                 <img
                   src={course.img}
                   alt={course.title}
-                  className="rounded-xl w-full h-[180px] object-cover mb-3"
+                  className="rounded-xl w-full h-[180px] object-cover mb-3 p-1"
                 />
                 <div className="text-left">
                   <div className="flex justify-between items-center">
