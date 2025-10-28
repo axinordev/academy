@@ -24,7 +24,7 @@ const courses = [
     title: "Cyber Security",
     duration: "3 Months",
     level: "Intermediate",
-    includes: "ethical hacking",
+    includes: "Ethical Hacking",
   },
 ];
 
@@ -34,7 +34,7 @@ const FeaturedCourses = () => {
       className="bg-[#F3F6F9] py-14 font-['Poppins'] text-[#0F172A]"
       id="courses"
     >
-      <div className="w-full mx-auto pl-[60px] pr-[40px] text-center">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-[60px] text-center">
         {/* Section Heading */}
         <div className="mb-4">
           <p className="inline-block bg-[#EC489926] text-[#EC4899] px-3 py-[3px] rounded-md font-medium text-xs shadow-sm">
@@ -42,13 +42,13 @@ const FeaturedCourses = () => {
           </p>
         </div>
 
-        <h2 className="text-3xl md:text-4xl font-semibold mt-6 mb-6 text-[#0F172A] w-fit mx-auto">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mt-6 mb-6 text-[#0F172A] w-fit mx-auto leading-tight">
           Our <span className="text-[#EC4899]">Featured</span> Courses
         </h2>
 
         <p className="max-w-2xl mx-auto mb-10 text-[15px] leading-relaxed">
           Explore our most in-demand programs designed to help you gain hands-on
-          <br />
+          <br className="hidden sm:block" />
           skills, real-world experience, and confidence to build your tech career.
         </p>
 
@@ -66,22 +66,32 @@ const FeaturedCourses = () => {
         </div>
 
         {/* Course Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 justify-center">
+        <div
+          className="
+            grid 
+            grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-3 
+            gap-4 
+            justify-center
+            place-items-center
+          "
+        >
           {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-4 w-[360px] h-[360px] flex flex-col justify-between border border-[#C7DDF4]"
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-4 w-[90%] sm:w-[330px] md:w-[340px] lg:w-[360px] h-[360px] flex flex-col justify-between border border-[#C7DDF4]"
             >
-              {/* Course Image (reduced side padding) */}
+              {/* Course Image */}
               <img
                 src={course.img}
                 alt={course.title}
                 className="rounded-xl w-full h-[180px] object-cover mb-3 px-[2px]"
               />
 
-              {/* Title + Duration in same line */}
+              {/* Title + Duration */}
               <div className="flex items-center justify-between text-left">
-                <h3 className="font-normal text-lg text-[#0F172A]">
+                <h3 className="font-normal text-[16px] sm:text-[17px] text-[#0F172A]">
                   {course.title}
                 </h3>
                 <p className="text-sm text-[#6B7280] whitespace-nowrap ml-2">
@@ -89,7 +99,7 @@ const FeaturedCourses = () => {
                 </p>
               </div>
 
-              {/* Level + Includes + Arrow (same line) */}
+              {/* Level + Includes + Arrow */}
               <div className="flex justify-between items-center mt-3">
                 <div className="text-left text-[#6B7280] text-[13px] leading-snug">
                   <p>
@@ -101,7 +111,10 @@ const FeaturedCourses = () => {
                   </p>
                 </div>
 
-                <button className="w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e] hover:bg-[#e01d5e] hover:border-[#e01d5e] hover:shadow-md transition ml-2">
+                <button
+                  className="w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e]
+                  hover:bg-[#e01d5e] hover:border-[#e01d5e] hover:shadow-md transition ml-2"
+                >
                   <img
                     src={arrowIcon}
                     alt="arrow icon"
