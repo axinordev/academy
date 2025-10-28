@@ -2,7 +2,7 @@ import React from 'react';
 
 import icon from '../assets/images/group.svg';
 import whatsappIcon from '../assets/images/whatsapp_icon.svg';
-import bg2 from '../assets/images/bg2.png';
+import bg2 from '../assets/images/bg3.png';
 import wm from '../assets/images/woman-lap.jpeg';
 
 
@@ -16,7 +16,7 @@ const HeroSection = () => {
       <img
         src={bg2}
         alt="Background"
-        className="absolute top-0 left-0 w-full object-cover z-0 object-top hidden md:block"
+        className="absolute top-0 left-0 overflow-x-hidden w-full object-cover z-0 object-top hidden md:block"
         
       />
       
