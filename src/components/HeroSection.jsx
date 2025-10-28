@@ -2,22 +2,30 @@ import React from 'react';
 import womanLap from '../assets/images/woman-laptop.svg';
 import icon from '../assets/images/icon.png';
 import whatsappIcon from '../assets/images/whatsapp_icon.svg';
-import bg1 from '../assets/images/herosection_bg.svg'
-import bg2 from '../assets/images/herSecBg.svg'
+import bg2 from '../assets/images/herSecBg.svg';
 
 const HeroSection = () => {
   return (
-    
-      <section
-        id="about"
-        className="py-12 bg-cover bg-center bg-no-repeat min-h-screen pt-[90px]"
-        style={{ backgroundImage: `url(${bg2})` }}
-      >
+    <section
+      id="about"
+      className="py-12 bg-cover bg-center bg-no-repeat min-h-screen pt-[90px]"
+      style={{ backgroundImage: `url(${bg2})` }}
+    >
       <div className="container mx-auto px-4">
         
         {/* Top Guarantee Label */}
         <div className="mb-6">
-          <p className="inline-block bg-pink-500 bg-opacity-20 text-pink-500 px-4 py-2 rounded-md font-medium text-sm shadow-sm">
+          <p
+            className="inline-flex items-center justify-center text-[#EC4899] font-semibold text-[14px] leading-[20px]"
+            style={{
+              backgroundColor: '#EC489926', // Pink background with 15% opacity
+              width: '230px',
+              height: '30px',
+              borderRadius: '5px',
+              padding: '2px 16px',
+              gap: '10px',
+            }}
+          >
             100% Satisfaction Guarantee
           </p>
         </div>
@@ -27,7 +35,7 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="lg:w-7/12 flex flex-col gap-6">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-Poppins leading-snug">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Inter'] leading-snug">
               Where <span className="text-pink-500">Learning</span> Meets <br/>
               Real-World Innovation.
             </h1>
@@ -41,13 +49,17 @@ const HeroSection = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap items-center gap-4 mt-4">
-              <a href="#explore" 
-                 className="bg-pink-500 text-white font-semibold rounded-full px-6 py-2.5 hover:opacity-90 transition text-sm md:text-base">
+              <a 
+                href="#explore" 
+                className="bg-pink-500 text-white font-semibold rounded-full px-6 py-2.5 hover:opacity-90 transition text-sm md:text-base"
+              >
                 Explore Courses
               </a>
 
-              <a href="#enquire" 
-                 className="bg-transparent text-pink-500 border-2 border-pink-500 font-semibold rounded-full px-6 py-2.5 hover:bg-pink-500 hover:text-white transition text-sm md:text-base">
+              <a 
+                href="#enquire" 
+                className="bg-transparent text-pink-500 border-2 border-pink-500 font-semibold rounded-full px-6 py-2.5 hover:bg-pink-500 hover:text-white transition text-sm md:text-base"
+              >
                 Enquire Now
               </a>
 
@@ -63,19 +75,18 @@ const HeroSection = () => {
               className="max-w-full h-auto object-contain w-[600px] md:w-[400px] lg:w-[500px]"
             />
           </div>
-
         </div>
       </div>
-     {/* Floating WhatsApp Button in white semi-square */}
-<a
-  href="https://wa.me/919496787651"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed bottom-8 right-6 w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition z-50"
->
-  <img src={whatsappIcon} alt="WhatsApp" className="w-8 h-8"/>
-</a>
 
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/919496787651"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-6 w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition z-50"
+      >
+        <img src={whatsappIcon} alt="WhatsApp" className="w-8 h-8"/>
+      </a>
     </section>
   );
 };

@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/logo_main.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-transparent">
+    <div className="bg-transparent font-poppins">
       <nav className="bg-transparent w-full fixed top-0 left-0 z-50">
-        <div className="flex items-center justify-between relative h-[70px] px-4 md:px-10 overflow-hidden">
+        <div className="flex items-center justify-between relative h-[100px] md:h-[120px] px-6 md:px-10">
           {/* Logo */}
-          <div className="absolute top-0 left-0 w-[200px] h-[200px] overflow-hidden -translate-y-10">
+          <div className="flex-shrink-0">
             <img
               src={logo}
               alt="Logo"
-              className="object-cover w-full h-full transform scale-[0.8] translate-x-[-10px] translate-y-[-10px]"
+              className="object-contain w-[160px] md:w-[200px] h-auto mt-2 md:mt-0"
             />
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center space-x-8 text-black font-normal mx-auto">
+          <ul className="hidden md:flex items-center space-x-10 text-[#222] font-normal">
             <li>
               <Link
                 to="/"
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 transition"
+                className="hover:text-[#EC4899] hover:underline hover:underline-offset-4 transition-all"
               >
                 Home
               </Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/courses"
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 transition"
+                className="hover:text-[#EC4899] hover:underline hover:underline-offset-4 transition-all"
               >
                 Courses
               </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#About"
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 transition"
+                className="hover:text-[#EC4899] hover:underline hover:underline-offset-4 transition-all"
               >
                 About Us
               </a>
@@ -47,7 +47,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#Events"
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 transition"
+                className="hover:text-[#EC4899] hover:underline hover:underline-offset-4 transition-all"
               >
                 Events
               </a>
@@ -55,7 +55,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 transition"
+                className="hover:text-[#EC4899] hover:underline hover:underline-offset-4 transition-all"
               >
                 Contact Us
               </Link>
@@ -63,10 +63,11 @@ const Navbar = () => {
           </ul>
 
           {/* Enquire Now Button */}
-          <div className="hidden md:block flex-shrink-0">
+          <div className="hidden md:block">
             <a
               href="#Enquire"
-              className="bg-pink-500 text-white px-6 py-2 rounded-full font-normal"
+              className="text-white px-6 py-2 rounded-full font-normal transition-all"
+              style={{ backgroundColor: "#EC4899" }}
             >
               Enquire Now
             </a>
@@ -79,7 +80,7 @@ const Navbar = () => {
               className="text-black focus:outline-none"
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -88,21 +89,25 @@ const Navbar = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
+                  d={
+                    isOpen
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
+                  }
                 />
               </svg>
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Dropdown Menu */}
         {isOpen && (
-          <ul className="md:hidden bg-[#F0FFFF] text-black px-6 py-4 space-y-4 mt-[120px]">
+          <ul className="md:hidden bg-[#F0FFFF] text-black px-6 py-6 space-y-4 mt-2 shadow-lg rounded-b-2xl font-normal">
             <li>
               <Link
                 to="/"
                 onClick={() => setIsOpen(false)}
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 block transition"
+                className="block hover:text-[#EC4899] hover:underline transition"
               >
                 Home
               </Link>
@@ -111,7 +116,7 @@ const Navbar = () => {
               <Link
                 to="/courses"
                 onClick={() => setIsOpen(false)}
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 block transition"
+                className="block hover:text-[#EC4899] hover:underline transition"
               >
                 Courses
               </Link>
@@ -119,17 +124,35 @@ const Navbar = () => {
             <li>
               <a
                 href="#About"
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 block transition"
+                className="block hover:text-[#EC4899] hover:underline transition"
               >
                 About Us
               </a>
             </li>
             <li>
               <a
+                href="#Events"
+                className="block hover:text-[#EC4899] hover:underline transition"
+              >
+                Events
+              </a>
+            </li>
+            <li>
+              <a
                 href="#Contact"
-                className="hover:underline hover:underline-offset-4 hover:text-pink-500 block transition"
+                className="block hover:text-[#EC4899] hover:underline transition"
               >
                 Contact Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="#Enquire"
+                className="block text-center text-white px-6 py-2 rounded-full font-normal"
+                style={{ backgroundColor: "#EC4899" }}
+                onClick={() => setIsOpen(false)}
+              >
+                Enquire Now
               </a>
             </li>
           </ul>
