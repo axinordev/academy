@@ -58,28 +58,32 @@ const Choose = () => {
             </div>
 
                        
-                {/* Cards Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y-6 mt-[-10px] place-items-start">
+  {/* Card 1 */}
   <div className="bg-[#F3F6F9] border border-[#CBD5E1] rounded-2xl p-4 text-center transition h-[120px] flex flex-col justify-center w-[230px]">
     <img src={Card1} alt="card1" className="mx-auto mb-2 w-14 h-14" />
     <p className="text-[#0F172A] text-sm font-medium">Job ready curriculum</p>
   </div>
 
-  <div className="bg-[#F3F6F9] border border-[#CBD5E1] rounded-2xl p-4 text-center transition h-[120px] flex flex-col justify-center w-[230px]">
+  {/* Card 2 – shifted left */}
+  <div className="bg-[#F3F6F9] border border-[#CBD5E1] rounded-2xl p-4 text-center transition h-[120px] flex flex-col justify-center w-[230px] -ml-8">
     <img src={Card2} alt="card2" className="mx-auto mb-2 w-14 h-14" />
     <p className="text-[#0F172A] text-sm font-medium">Hands-On learning</p>
   </div>
 
+  {/* Card 3 */}
   <div className="bg-[#F3F6F9] border border-[#CBD5E1] rounded-2xl p-4 text-center transition h-[120px] flex flex-col justify-center w-[230px]">
     <img src={Card3} alt="mentor" className="mx-auto mb-2 w-14 h-14" />
     <p className="text-[#0F172A] text-sm font-medium">Expert Mentors</p>
   </div>
 
-  <div className="bg-[#F3F6F9] border border-[#CBD5E1] rounded-2xl p-4 text-center transition h-[120px] flex flex-col justify-center w-[230px]">
+  {/* Card 4 – shifted left */}
+  <div className="bg-[#F3F6F9] border border-[#CBD5E1] rounded-2xl p-4 text-center transition h-[120px] flex flex-col justify-center w-[230px] -ml-8">
     <img src={Card4} alt="card4" className="mx-auto mb-2 w-14 h-14" />
     <p className="text-[#0F172A] text-sm font-medium">Career Support</p>
   </div>
 </div>
+
 
      </div>
         </div>
