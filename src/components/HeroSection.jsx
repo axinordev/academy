@@ -16,7 +16,7 @@ const HeroSection = () => {
       <img
         src={bg2}
         alt="Background"
-        className="absolute top-0 left-0 overflow-x-hidden w-full object-cover z-0 object-top hidden md:block"
+        className="absolute top-0 left-0  overflow-x-hidden w-full object-cover z-0 object-top hidden md:block"
         
       />
       
