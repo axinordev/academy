@@ -83,7 +83,14 @@ const Mentors = () => {
   <p className="text-gray-500 text-sm">Senior Full Stack Developer</p>
 </div>
 
-{/* Mentor 2 */} <div className="flex-shrink-0 snap-start text-center transform transition-transform duration-300 hover:scale-105"> <img src={Woman} alt="Anjali Sreedhar" className="rounded-3xl w-[320px] sm:w-[360px] lg:[320px] h-auto object-cover mx-auto" /> <h3 className="text-[#0F172A] font-semibold text-xl mt-4"> Anjali Sreedhar </h3> <p className="text-gray-500 text-sm">Flutter Developer</p> </div>
+{/* Mentor 2 */}
+ <div className="flex-shrink-0 snap-start text-center transform transition-transform duration-300 hover:scale-105">
+  <img src={Woman} alt="Anjali Sreedhar" className="rounded-3xl w-[320px] sm:w-[360px] lg:[320px] h-auto object-cover mx-auto" /> 
+  <h3 className="text-[#0F172A] font-semibold text-xl mt-4"> 
+    Anjali Sreedhar 
+  </h3> 
+<p className="text-gray-500 text-sm">Flutter Developer</p> 
+</div>
 
 {/* Mentor 3 */}
 <div className="flex-shrink-0 snap-start text-center transform transition-transform duration-300 hover:scale-105">

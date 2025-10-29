@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-14 bg-cover bg-center bg-no-repeat font-[Poppins]"
+      className="py-14 font-[Poppins] bg-[#F3F6F9] sm:bg-cover sm:bg-center sm:bg-no-repeat"
       style={{ backgroundImage: `url(${bg1})` }}
     >
       <div className="container mx-auto px-6">
@@ -67,32 +67,33 @@ const About = () => {
             </div>
           </div>
 
-          <div className="lg:w-5/12 flex justify-center lg:justify-end relative">
-  {/* Image shifted slightly left and down */}
-  <img
-    src={Video}
-    alt="Video"
-    className="rounded-3xl shadow-lg max-w-full h-auto scale-125 transform -translate-x-6 translate-y-6"
-  />
+          {/* Right Side — Video Section */}
+          <div className="lg:w-5/12 flex justify-center lg:justify-end relative mt-6 sm:mt-0">
+            <img
+              src={Video}
+              alt="Video"
+              className="rounded-3xl shadow-lg max-w-full h-auto scale-125 transform -translate-x-6 translate-y-6"
+            />
 
-  {/* Play Video Overlay Button */}
-  <button
-    className="absolute bottom-0 left-0 flex items-center justify-between gap-3 bg-[#F8FAFC] text-[#0F172A] px-2 py-1
+            {/* Play Video Overlay Button */}
+            <button
+              className="absolute bottom-0 left-0 flex items-center justify-between gap-3 bg-[#F8FAFC] text-[#0F172A] px-2 py-1
  rounded-full text-[15px] font-normal shadow-lg hover:opacity-95 transition transform translate-y-8 -translate-x-4"
-  >
-    Play Video
-    <img src={playIcon} alt="Play" className="w-11 h-11" />
-  </button>
-</div>
+            >
+              Play Video
+              <img src={playIcon} alt="Play" className="w-11 h-11" />
+            </button>
+          </div>
 
         </div>
 
         {/* Know More Button */}
-        <div className="mt-8 flex justify-start">
-          <button className="bg-[#EC4899] text-white px-5 py-2.5 rounded-full font-normal hover:opacity-90 transition text-[14px]">
-            Know More About Us
-          </button>
-        </div>
+       <div className="mt-16 sm:mt-16 flex justify-start">
+  <button className="bg-[#EC4899] text-white px-5 py-2.5 rounded-full font-normal hover:opacity-90 transition text-[14px]">
+    Know More About Us
+  </button>
+</div>
+
       </div>
     </section>
   );

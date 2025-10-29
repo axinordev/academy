@@ -45,7 +45,7 @@ const Testimonials = () => {
             </div>
 
             {/* Arrows on the right — no white bg */}
-            <div className="flex gap-3 mt-8 lg:mt-0 absolute right-[20px] top-28">
+            <div className="flex gap-3 mt-8 lg:mt-0 absolute right-[10px] sm:right-[20px] top-36 sm:top-28">
               <button onClick={() => scroll('left')}>
                 <img
                   src={BackIcon}
