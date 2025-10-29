@@ -1,7 +1,7 @@
 import React from 'react';
 import Video from '../assets/images/video.svg'; // replace with actual path
 import Arrow from '../assets/images/arrow.svg'; // import arrow icon
-import bg1 from '../assets/images/about_bg_new.svg'
+import bg1 from '../assets/images/bgVid.png'
 
 const About = () => {
   return (
