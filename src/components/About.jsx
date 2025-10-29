@@ -16,12 +16,11 @@ const About = () => {
 
           {/* Left Content */}
           <div className="lg:w-7/12 flex flex-col gap-5">
-            <div className="mb-2">
-              <p className="inline-block bg-[#EC4899] bg-opacity-15 text-[#EC4899] px-3 py-1 rounded-md font-medium text-[11px] shadow-sm">
+            <div className="mb-8">
+              <p className="inline-block bg-[#EC4899] bg-opacity-15 text-[#EC4899] px-4 py-2 rounded-md font-medium text-[13px] shadow-sm">
                 About Us
               </p>
             </div>
-
             <h3 className="text-[34px] leading-[46px] font-semibold text-[#0F172A]">
               Shaping the <span className="text-[#EC4899]">Next Generation</span><br /> of Tech Innovators
             </h3>

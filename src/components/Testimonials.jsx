@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import Testimonial1 from '../assets/images/testimonial1.png';
 import Testimonial2 from '../assets/images/testimonial2.png';
 import Testimonial3 from '../assets/images/testimonial3.png';
-import VideoIcon from '../assets/images/video_icon.png';
-import BackIcon from '../assets/images/back_icon.svg';
-import FrontIcon from '../assets/images/front_icon.svg';
+import VideoIcon from '../assets/images/playButton.png';
+import BackIcon from '../assets/images/arrow_prev.png';
+import FrontIcon from '../assets/images/arrow_next.png';
 
 const Testimonials = () => {
   const scrollRef = useRef(null);
@@ -21,119 +21,106 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-12 bg-[#F0FFFF] relative">
-      <div className="container mx-auto px-4 flex flex-col gap-8 relative">
-
-        {/* Heading & Description */}
-        <div className="text-center lg:text-left relative">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+    <section
+      id="testimonials"
+      className="py-20 bg-[#F3F6F9] relative font-[Poppins]"
+    >
+      <div className="container mx-auto px-4 flex flex-col gap-12 relative">
+        {/* Heading */}
+        <div className="relative">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between relative">
             <div>
-              <div className="mb-6">
-          <p className="inline-block bg-pink-500 bg-opacity-20 text-pink-500 px-4 py-2 rounded-md font-medium text-sm shadow-sm">
-            Testimonials
-          </p>
-        </div>
-              <h3 className="text-3xl md:text-4xl font-bold font-Poppins">
-                What Our <span className='text-pink-500'>Learners</span> Say
+              <div className="mb-8">
+                <p className="inline-block bg-[#EC489926] text-[#EC4899] px-4 py-2 rounded-md font-medium text-sm shadow-sm">
+                  Testimonials
+                </p>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-semibold text-[#0F172A] leading-tight mb-6">
+                What Our <span className="text-[#EC4899]">Learners</span> Say
               </h3>
-              <p className="text-gray-500 mt-4 max-w-2xl mx-auto lg:mx-0">
-                Real experiences from our first batches and interns who started their journey with Axinor Academy.
+              <p className="text-[#46484B] mt-6 max-w-2xl mx-auto lg:mx-0 text-[15px] leading-[26px]">
+                Real experiences from our first batches and interns who started
+                their <br/>journey with Axinor Academy.
               </p>
             </div>
 
-            {/* Scroll Buttons */}
-            <div className="flex gap-3 mt-4 justify-end w-full">
-              <button
-                onClick={() => scroll('left')}
-                className="bg-white hover:bg-gray-100 transition rounded-full p-2 shadow-md"
-              >
-                <img src={BackIcon} alt="Back" className="w-8 h-8" />
+            {/* Arrows on the right — no white bg */}
+            <div className="flex gap-3 mt-8 lg:mt-0 absolute right-[20px] top-28">
+              <button onClick={() => scroll('left')}>
+                <img
+                  src={BackIcon}
+                  alt="Back"
+                  className="w-8 h-8 hover:scale-110 transition-transform"
+                />
               </button>
-              <button
-                onClick={() => scroll('right')}
-                className="bg-white hover:bg-gray-100 transition rounded-full p-2 shadow-md"
-              >
-                <img src={FrontIcon} alt="Forward" className="w-8 h-8" />
+              <button onClick={() => scroll('right')}>
+                <img
+                  src={FrontIcon}
+                  alt="Forward"
+                  className="w-8 h-8 hover:scale-110 transition-transform"
+                />
               </button>
             </div>
           </div>
         </div>
 
-        {/* Testimonial Cards - Scrollable */}
-        <div className="overflow-hidden">
+        {/* Cards */}
+        <div className="overflow-hidden mt-6">
           <div
             ref={scrollRef}
-            className="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory touch-pan-x"
+            className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory touch-pan-x justify-center lg:justify-center"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {/* Card 1 */}
-            <div className="bg-white rounded-3xl shadow-md w-[320px] md:w-[420px] flex-shrink-0 flex flex-col items-center min-h-[420px] pb-6 snap-start">
-              <img
-                src={Testimonial1}
-                alt="Jane Doe"
-                className="w-20 h-20 object-contain rounded-full mt-4 shadow-md"
-              />
-              <div className="flex flex-col items-center py-4">
-                <p className="text-black font-semibold text-sm mt-1">Anjali Raj</p>
-                <p className="text-gray-700 font-medium text-sm">MERN Stack Trainee</p>
-              </div>
-              <div className="p-6 flex flex-col items-center">
-                <p className="text-gray-700 text-sm text-center leading-relaxed">
-                  Axinor Academy helped me move from basic coding knowledge to real project work.
-                  The mentors guided me through every step with patience and practical insights.
-                </p>
-              </div>
-              <div className="flex items-center gap-2 bg-gray-100 text-gray-500 px-4 py-2 rounded-full mt-2">
-                <img src={VideoIcon} alt="video icon" className="w-4 h-4" />
-                <span className="text-sm font-medium">Play Video</span>
-              </div>
-            </div>
+            {[
+              {
+                img: Testimonial1,
+                name: 'Anjali Raj',
+                role: 'MERN Stack Trainee',
+                text: 'Axinor Academy helped me move from basic coding knowledge to real project work. The mentors guided me through every step with patience and practical insights.',
+              },
+              {
+                img: Testimonial2,
+                name: 'Neha K',
+                role: 'Cyber Security Learner',
+                text: 'The sessions were well structured, and mentors shared their real experiences from Axinor Technologies. It made learning more engaging and relevant.',
+              },
+              {
+                img: Testimonial3,
+                name: 'Arjun P',
+                role: 'Flutter Development Intern',
+                text: 'What I liked most was the hands-on approach. We built live apps, discussed real client problems, and learned how things work in the IT field.',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-3xl shadow-md w-[400px] lg:w-[380px] flex-shrink-0 flex flex-col items-center min-h-[440px] pb-6 snap-start border border-gray-200"
+              >
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="w-24 h-24 object-contain rounded-full mt-6 shadow-md"
+                />
+                <div className="flex flex-col items-center py-4">
+                  <p className="text-[#0F172A] font-semibold text-base mt-1">
+                    {item.name}
+                  </p>
+                  <p className="text-[#46484B] font-medium text-sm">
+                    {item.role}
+                  </p>
+                </div>
+                <div className="p-6 flex flex-col items-center">
+                  <p className="text-[#46484B] text-sm text-center leading-relaxed">
+                    {item.text}
+                  </p>
+                </div>
 
-            {/* Card 2 */}
-            <div className="bg-white rounded-3xl shadow-md w-[320px] md:w-[420px] flex-shrink-0 flex flex-col items-center min-h-[420px] pb-6 snap-start">
-              <img
-                src={Testimonial2}
-                alt="John Smith"
-                className="w-20 h-20 object-contain rounded-full mt-4 shadow-md"
-              />
-              <div className="flex flex-col items-center py-4">
-                <p className="text-black font-semibold text-sm mt-1">Neha K</p>
-                <p className="text-gray-700 font-medium text-sm">Cyber Security Learner</p>
+                {/* Play Video Button */}
+                <div className="flex items-center gap-2 bg-gray-100 text-[#46484B] px-3 py-1 rounded-full mt-2">
+                  <img src={VideoIcon} alt="video icon" className="w-11 h-11" />
+                  <span className="text-sm font-medium">Play Video</span>
+                </div>
               </div>
-              <div className="p-6 flex flex-col items-center">
-                <p className="text-gray-700 text-sm text-center leading-relaxed">
-                  The sessions were well structured, and mentors shared their real experiences from
-                  Axinor Technologies. It made learning more engaging and relevant.
-                </p>
-              </div>
-              <div className="flex items-center gap-2 bg-gray-100 text-gray-500 px-4 py-2 rounded-full mt-2">
-                <img src={VideoIcon} alt="video icon" className="w-4 h-4" />
-                <span className="text-sm font-medium">Play Video</span>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white rounded-3xl shadow-md w-[320px] md:w-[420px] flex-shrink-0 flex flex-col items-center min-h-[420px] pb-6 snap-start">
-              <img
-                src={Testimonial3}
-                alt="Emily Johnson"
-                className="w-20 h-20 object-contain rounded-full mt-4 shadow-md"
-              />
-              <div className="flex flex-col items-center py-4">
-                <p className="text-black font-semibold text-sm mt-1">Arjun P</p>
-                <p className="text-gray-700 font-medium text-sm">Flutter Development Intern</p>
-              </div>
-              <div className="p-6 flex flex-col items-center">
-                <p className="text-gray-700 text-sm text-center leading-relaxed">
-                  What I liked most was the hands-on approach. We built live apps, discussed real client problems,
-                  and learned how things work in the IT field.
-                </p>
-              </div>
-              <div className="flex items-center gap-2 bg-gray-100 text-gray-500 px-4 py-2 rounded-full mt-2">
-                <img src={VideoIcon} alt="video icon" className="w-4 h-4" />
-                <span className="text-sm font-medium">Play Video</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
