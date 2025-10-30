@@ -83,7 +83,7 @@ const Navbar = () => {
           </ul>
 
           {/* Enquire Now Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ml-auto">
             <a
               href="#Enquire"
               className="text-white px-6 py-2 rounded-full font-normal transition-all"

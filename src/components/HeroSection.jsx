@@ -9,10 +9,10 @@ import wm from '../assets/images/woman-lap.jpeg';
 const HeroSection = () => {
   return (
     <section
-      id="hero"
-      className="bg-cover bg-center bg-no-repeat min-h-screen flex items-start md:items-center md:justify-center font-['Poppins']"
-      
-    >
+  id="hero"
+  className="bg-cover bg-center bg-no-repeat min-h-screen flex items-start md:items-center justify-start font-['Poppins']"
+>
+
       <img
         src={bg2}
         alt="Background"
@@ -22,8 +22,7 @@ const HeroSection = () => {
       
       <div className='flex flex-col'>
       {/* Wrapper */}
-      <div className="w-full flex flex-col-reverse lg:flex-row z-10 items-center justify-between px-5 sm:px-10 lg:px-[40px] pt-[100px] sm:pt-[40px] lg:pt-[200px]">
-
+     <div className="w-full flex flex-col-reverse lg:flex-row z-10 items-center justify-between px-6 md:px-10 lg:-ml-6 gap-10 pt-[100px] sm:pt-[40px] lg:pt-[200px]">
         {/* Left Text Section */}
         <div className="lg:w-7/12 w-full bg-transparent rounded-2xl p-5 sm:p-6 lg:p-8 flex flex-col gap-5 text-center lg:text-left">
           
