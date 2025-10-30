@@ -34,10 +34,10 @@ const FeaturedCourses = () => {
       className="bg-[#F3F6F9] py-14 font-['Poppins'] text-[#0F172A] mt-52"
       id="courses"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-[60px] text-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
         {/* Section Heading */}
         <div className="mb-4">
-          <p className="inline-block bg-[#EC489926] text-[#EC4899] px-3 py-[3px] rounded-md font-medium text-xs shadow-sm">
+          <p className="inline-block bg-[#EC489926] text-[#EC4899] px-3 py-[3px] rounded-md font-medium text-xs">
             Our Courses
           </p>
         </div>
@@ -72,21 +72,22 @@ const FeaturedCourses = () => {
             grid-cols-1 
             sm:grid-cols-2 
             lg:grid-cols-3 
-            gap-4 
-            justify-center
-            place-items-center
+            gap-8 
+            justify-start
+            items-start
+            ml-4
           "
         >
           {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-4 w-[90%] sm:w-[330px] md:w-[340px] lg:w-[360px] h-[360px] flex flex-col justify-between border border-[#C7DDF4]"
+              className="bg-white rounded-2xl border border-[#C7DDF4] transition p-4 w-[385px] h-[400px] flex flex-col justify-between"
             >
               {/* Course Image */}
               <img
                 src={course.img}
                 alt={course.title}
-                className="rounded-xl w-full h-[180px] object-cover mb-3 px-[2px]"
+                className="rounded-xl w-full h-[200px] object-cover mb-3"
               />
 
               {/* Title + Duration */}
@@ -100,25 +101,31 @@ const FeaturedCourses = () => {
               </div>
 
               {/* Level + Includes + Arrow */}
-              <div className="flex justify-between items-center mt-3">
-                <div className="text-left text-[#6B7280] text-[13px] leading-snug">
+              <div className="flex justify-between items-end mt-3">
+                <div className="text-left text-[#6B7280] text-[13px] leading-snug opacity-70">
                   <p>
-                    <span className="font-medium">Level:</span> {course.level}
+                    <span className="font-medium text-[#0F172A] opacity-80">
+                      Level:
+                    </span>{" "}
+                    {course.level}
                   </p>
-                  <p>
-                    <span className="font-medium">Includes:</span>{" "}
+                  <p className="mt-1">
+                    <span className="font-medium text-[#0F172A] opacity-80">
+                      Includes:
+                    </span>{" "}
                     {course.includes}
                   </p>
                 </div>
 
+                {/* Arrow Button */}
                 <button
-                  className="w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e]
-                  hover:bg-[#e01d5e] hover:border-[#e01d5e] hover:shadow-md transition ml-2"
+                  className="group w-9 h-9 rounded-full flex items-center justify-center bg-white border-2 border-[#e01d5e]
+                  hover:bg-[#e01d5e] hover:border-white transition ml-2"
                 >
                   <img
                     src={arrowIcon}
                     alt="arrow icon"
-                    className="w-4 h-4 object-contain"
+                    className="w-4 h-4 object-contain transition group-hover:brightness-0 group-hover:invert"
                   />
                 </button>
               </div>
