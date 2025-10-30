@@ -58,9 +58,9 @@ const ContactSection = () => {
           {/* Left - Logo and Description */}
           <div className="flex-1">
             <img src={logo} alt="Axinor Technologies" className="w-44 mb-5" />
-            <p className="max-w-sm text-[15px] leading-relaxed">
-              A learning initiative by Axinor Technologies empowering future
-              developers through real-world training and expert mentorship.
+            <p className="max-w-md text-[15px] leading-relaxed">
+              A learning initiative by Axinor Technologies -<br/>empowering future
+              developers through real-<br/> world training and expert mentorship.
             </p>
           </div>
 
@@ -162,11 +162,7 @@ const ContactSection = () => {
           {/* Right - Terms & Privacy */}
           <div className="flex gap-3 sm:gap-4">
             <span className="hover:text-pink-400 cursor-pointer">
-              Terms & Condition
-            </span>
-            <span>/</span>
-            <span className="hover:text-pink-400 cursor-pointer">
-              Privacy Policy
+              Terms & Condition / Privacy Policy
             </span>
           </div>
         </div>
