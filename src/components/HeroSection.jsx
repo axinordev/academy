@@ -16,7 +16,7 @@ const HeroSection = () => {
       <img
         src={bg2}
         alt="Background"
-        className="absolute top-0 left-0  overflow-x-hidden w-full object-cover z-0 object-top hidden md:block"
+        className="absolute top-0 left-0   overflow-x-hidden w-full object-cover z-0 object-top hidden md:block"
         
       />
       
@@ -86,7 +86,7 @@ const HeroSection = () => {
 </div>
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919496787651"
+        href="https://wa.me/919446186026"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-5 right-4 sm:bottom-6 sm:right-5 w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition z-50"

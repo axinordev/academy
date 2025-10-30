@@ -1,8 +1,9 @@
 import React from "react";
 import logo from "../assets/images/logo2.svg";
+import mapImage from "../assets/images/map.png";
 import locationIcon from "../assets/images/location_icon.png";
 import phoneIcon from "../assets/images/phone_icon.png";
-import mailIcon from "../assets/images/mail_icon.png";
+import mailIcon from "../assets/images/gmail.png";
 import linkedinIcon from "../assets/images/linkedin.png";
 import instaIcon from "../assets/images/insta1.png";
 import fbIcon from "../assets/images/facebook.png";
@@ -32,17 +33,20 @@ const ContactSection = () => {
 
         {/* Right - Map (Reduced Width) */}
         <div className="flex justify-center w-full lg:w-[40%]">
-          <iframe
-            title="Axinor Academy Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.152312083365!2d75.786!3d11.257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65bfa2bce2b83%3A0xb5c7f6d05d63e3d4!2sHiLITE%20Business%20Park!5e0!3m2!1sen!2sin!4v1698179099103!5m2!1sen!2sin"
-            width="100%"
-            height="260"
-            style={{ border: 0, borderRadius: "12px" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+  <a
+    href="https://www.google.com/maps/place/HiLITE+Business+Park/@11.257,75.786,15z"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full"
+  >
+    <img
+      src={mapImage}
+      alt="Axinor Academy Location Map"
+      className="w-full h-[260px] rounded-xl object-cover shadow-md hover:opacity-90 transition duration-300"
+    />
+  </a>
+</div>
+
       </div>
 
       {/* Divider */}
@@ -101,7 +105,7 @@ const ContactSection = () => {
                   <img
                     src={locationIcon}
                     alt="Location"
-                    className="w-5 h-5 opacity-80"
+                    className="w-3 h-5 opacity-80"
                   />
                   <span>Kozhikode, Kerala</span>
                 </li>
@@ -111,7 +115,7 @@ const ContactSection = () => {
                     alt="Phone"
                     className="w-5 h-5 opacity-80"
                   />
-                  <span>+91 9XXXX XXXXX</span>
+                  <span>+91 9746577647, +91 9446186026</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <img
