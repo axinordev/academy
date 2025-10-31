@@ -37,7 +37,7 @@ const FeaturedCourses = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
         {/* Section Heading */}
         <div className="mb-4">
-          <p className="inline-block bg-[#EC489926] text-[#EC4899] px-3 py-[3px] rounded-md font-medium text-xs">
+          <p className="inline-block bg-[#EC489926] text-[#EC4899] px-4 py-2 rounded-md font-medium text-s">
             Our Courses
           </p>
         </div>
@@ -81,7 +81,7 @@ const FeaturedCourses = () => {
           {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl border border-[#C7DDF4] transition p-4 w-[385px] h-[400px] flex flex-col justify-between"
+              className="bg-white rounded-2xl border border-[#C7DDF4] transition p-4 w-[385px] h-[400px] flex flex-col justify-between opacity-80 hover:opacity-100 hover:shadow-lg duration-200"
             >
               {/* Course Image */}
               <img
@@ -102,7 +102,7 @@ const FeaturedCourses = () => {
 
               {/* Level + Includes + Arrow */}
               <div className="flex justify-between items-end mt-3">
-                <div className="text-left text-[#6B7280] text-[13px] leading-snug opacity-70">
+                <div className="text-left text-[#6B7280] text-[13px] leading-snug">
                   <p>
                     <span className="font-medium text-[#0F172A] opacity-80">
                       Level:
