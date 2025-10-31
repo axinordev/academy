@@ -25,7 +25,7 @@ const About = () => {
               Shaping the <span className="text-[#EC4899]">Next Generation</span><br /> of Tech Innovators
             </h3>
 
-            <p className="text-[#0F172A] opacity-80 mt-3 text-[14px] leading-[22px]">
+            <p className="text-[#0F172A]/80 mt-3 text-[14px] leading-[22px]">
               Backed by Axinor Technologies, a growing IT company, we bring real-world <br />
               expertise into the classroom. Our mission is to help aspiring developers <br />
               gain the skills and confidence to thrive in today’s competitive tech world. <br />
@@ -39,7 +39,7 @@ const About = () => {
                 <img src={Arrow} alt="arrow" className="w-5 h-5" />
                 <p className="text-[#3661DA] text-[15px] font-semibold">
                   Practical Learning
-                  <span className="text-[#0F172A] opacity-70 font-normal ml-2 text-[13px]">
+                  <span className="text-[#0F172A]/70 font-normal ml-2 text-[13px]">
                     Gain real project experience beyond theory.
                   </span>
                 </p>
@@ -49,50 +49,60 @@ const About = () => {
                 <img src={Arrow} alt="arrow" className="w-5 h-5" />
                 <p className="text-[#3661DA] text-[15px] font-semibold">
                   Industry-Backed Expertise
-                  <span className="text-[#0F172A] opacity-70 font-normal ml-2 text-[13px]">
+                  <span className="text-[#0F172A]/70 font-normal ml-2 text-[13px]">
                     Learn directly from active IT professionals.
                   </span>
                 </p>
               </div>
 
-              <div className="flex items-center gap-4">
-                <img src={Arrow} alt="arrow" className="w-5 h-5" />
-                <p className="text-[#3661DA] text-[15px] font-semibold">
-                  Career-Focused Training
-                  <span className="text-[#0F172A] opacity-70 font-normal ml-2 text-[13px]">
-                    Develop the mindset and skills to excel in<br /> today’s tech world.
-                  </span>
-                </p>
-              </div>
+              <div className="flex items-start gap-4">
+  <img src={Arrow} alt="arrow" className="w-5 h-5 mt-1" />
+  <div className="text-[#3661DA] text-[15px] font-semibold leading-snug">
+    Career-Focused Training
+    <span className="text-[#0F172A]/70 font-normal text-[13px] ml-2 inline">
+      Develop the mindset and skills to excel in
+    </span>
+    <br />
+    <span className="text-[#0F172A]/70 font-normal text-[13px] ml-[200px] inline-block">
+      today’s tech world.
+    </span>
+  </div>
+</div>
+
             </div>
           </div>
 
           {/* Right Side — Video Section */}
           <div className="lg:w-5/12 flex justify-center lg:justify-end relative mt-6 sm:mt-0">
-            <img
-              src={Video}
-              alt="Video"
-              className="rounded-3xl shadow-lg max-w-full h-auto scale-125 transform -translate-x-6 translate-y-6"
-            />
+  <img
+    src={Video}
+    alt="Video"
+    className="rounded-3xl shadow-lg max-w-full h-auto scale-125 transform -translate-x-6 translate-y-6"
+  />
 
-            {/* Play Video Overlay Button */}
-            <button
-              className="absolute bottom-0 left-0 flex items-center justify-between gap-3 bg-[#F8FAFC] text-[#0F172A] px-2 py-1
- rounded-full text-[15px] font-normal shadow-lg hover:opacity-95 transition transform translate-y-8 -translate-x-4"
-            >
-              Play Video
-              <img src={playIcon} alt="Play" className="w-11 h-11" />
-            </button>
-          </div>
+  {/* Play Video Overlay Button */}
+  <button
+  className="absolute bottom-[-45px] left-[-65px] flex items-center justify-between gap-2 bg-[#F8FAFC] text-[#0F172A] px-2 py-1
+  rounded-full text-[15px] font-normal shadow-lg hover:opacity-95 transition"
+>
+  Play Video
+  <img src={playIcon} alt="Play" className="w-10 h-10" />
+</button>
+
+</div>
+
 
         </div>
 
-        {/* Know More Button */}
-       <div className="mt-16 sm:mt-16 flex justify-start">
-  <button className="bg-[#EC4899] text-white px-5 py-2.5 rounded-full font-normal hover:opacity-90 transition text-[14px]">
-    Know More About Us
-  </button>
-</div>
+        {/* Know More Button — matched with Explore Courses */}
+        <div className="mt-16 sm:mt-16 flex justify-start">
+          <a
+            href="#explore"
+            className="bg-[#EC4899] text-white font-medium rounded-full px-5 sm:px-6 py-2 hover:opacity-90 transition text-sm sm:text-base"
+          >
+            Know More About Us
+          </a>
+        </div>
 
       </div>
     </section>
