@@ -40,7 +40,7 @@ const Testimonials = () => {
               </h3>
               <p className="text-[#46484B] mt-6 max-w-2xl mx-auto lg:mx-0 text-[15px] leading-[26px]">
                 Real experiences from our first batches and interns who started
-                their <br/>journey with Axinor Academy.
+                their <br /> journey with Axinor Academy.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ const Testimonials = () => {
         <div className="overflow-hidden mt-6">
           <div
             ref={scrollRef}
-            className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory touch-pan-x justify-center lg:justify-center"
+            className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory touch-pan-x justify-start lg:justify-start pl-[20px]"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {[
@@ -93,13 +93,16 @@ const Testimonials = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-3xl shadow-md w-[400px] lg:w-[380px] flex-shrink-0 flex flex-col items-center min-h-[440px] pb-6 snap-start border border-gray-200"
+                className="bg-white rounded-3xl shadow-md w-[386px] lg:w-[386px] flex-shrink-0 flex flex-col items-center min-h-[440px] pb-6 snap-start border border-gray-200 ml-[-20px]"
               >
+                {/* Profile Image */}
                 <img
                   src={item.img}
                   alt={item.name}
                   className="w-24 h-24 object-contain rounded-full mt-6 shadow-md"
                 />
+
+                {/* Name + Role */}
                 <div className="flex flex-col items-center py-4">
                   <p className="text-[#0F172A] font-semibold text-base mt-1">
                     {item.name}
@@ -108,15 +111,21 @@ const Testimonials = () => {
                     {item.role}
                   </p>
                 </div>
-                <div className="p-6 flex flex-col items-center">
+
+                {/* Divider Line */}
+                 <div className="w-80 h-[1.5px] bg-[#0F172A]/10 mt-2 mb-2"></div>
+                
+
+                {/* Content */}
+                <div className="px-6 flex flex-col items-center">
                   <p className="text-[#46484B] text-sm text-center leading-relaxed">
                     {item.text}
                   </p>
                 </div>
 
                 {/* Play Video Button */}
-                <div className="flex items-center gap-2 bg-gray-100 text-[#46484B] px-3 py-1 rounded-full mt-2">
-                  <img src={VideoIcon} alt="video icon" className="w-11 h-11" />
+                <div className="flex items-center gap-2 bg-gray-100 text-[#46484B] px-1.5 py-1 rounded-full mt-4">
+                  <img src={VideoIcon} alt="video icon" className="w-10 h-10" />
                   <span className="text-sm font-medium">Play Video</span>
                 </div>
               </div>

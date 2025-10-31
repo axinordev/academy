@@ -25,7 +25,7 @@ const About = () => {
               Shaping the <span className="text-[#EC4899]">Next Generation</span><br /> of Tech Innovators
             </h3>
 
-            <p className="text-[#0F172A]/80 mt-3 text-[14px] leading-[22px]">
+            <p className="text-[#0F172A]/80 mt-3 text-[15px] leading-[22px]">
               Backed by Axinor Technologies, a growing IT company, we bring real-world <br />
               expertise into the classroom. Our mission is to help aspiring developers <br />
               gain the skills and confidence to thrive in today’s competitive tech world. <br />
@@ -37,9 +37,9 @@ const About = () => {
             <div className="flex flex-col gap-5 mt-4">
               <div className="flex items-center gap-4">
                 <img src={Arrow} alt="arrow" className="w-5 h-5" />
-                <p className="text-[#3661DA] text-[15px] font-semibold">
+                <p className="text-[#3661DA] text-[16px] font-semibold">
                   Practical Learning
-                  <span className="text-[#0F172A]/70 font-normal ml-2 text-[13px]">
+                  <span className="text-[#0F172A]/70 font-normal ml-2 text-[14px]">
                     Gain real project experience beyond theory.
                   </span>
                 </p>
@@ -47,9 +47,9 @@ const About = () => {
 
               <div className="flex items-center gap-4">
                 <img src={Arrow} alt="arrow" className="w-5 h-5" />
-                <p className="text-[#3661DA] text-[15px] font-semibold">
+                <p className="text-[#3661DA] text-[16px] font-semibold">
                   Industry-Backed Expertise
-                  <span className="text-[#0F172A]/70 font-normal ml-2 text-[13px]">
+                  <span className="text-[#0F172A]/70 font-normal ml-2 text-[14px]">
                     Learn directly from active IT professionals.
                   </span>
                 </p>
@@ -57,13 +57,13 @@ const About = () => {
 
               <div className="flex items-start gap-4">
   <img src={Arrow} alt="arrow" className="w-5 h-5 mt-1" />
-  <div className="text-[#3661DA] text-[15px] font-semibold leading-snug">
+  <div className="text-[#3661DA] text-[16px] font-semibold leading-snug">
     Career-Focused Training
-    <span className="text-[#0F172A]/70 font-normal text-[13px] ml-2 inline">
+    <span className="text-[#0F172A]/70 font-normal text-[14px] ml-2 inline">
       Develop the mindset and skills to excel in
     </span>
     <br />
-    <span className="text-[#0F172A]/70 font-normal text-[13px] ml-[200px] inline-block">
+    <span className="text-[#0F172A]/70 font-normal text-[14px] ml-[215px] inline-block">
       today’s tech world.
     </span>
   </div>
@@ -82,7 +82,7 @@ const About = () => {
 
   {/* Play Video Overlay Button */}
   <button
-  className="absolute bottom-[-45px] left-[-65px] flex items-center justify-between gap-2 bg-[#F8FAFC] text-[#0F172A] px-2 py-1
+  className="absolute bottom-[-45px] left-[-65px] flex items-center justify-between gap-2 bg-[#F8FAFC] text-[#0F172A] px-1 py-1
   rounded-full text-[15px] font-normal shadow-lg hover:opacity-95 transition"
 >
   Play Video
