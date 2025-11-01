@@ -103,7 +103,7 @@ const ContactSection = () => {
               </h4>
               <ul className="space-y-2 text-[15px]">
                 <li className="flex justify-center sm:justify-start items-start gap-2">
-                  <img src={locationIcon} alt="Location" className="w-4 h-5 opacity-80 mt-1" />
+                  <img src={locationIcon} alt="Location" className="w-4 h-6 opacity-80 mt-1" />
                   <span>Kozhikode, Kerala</span>
                 </li>
                 <li className="flex justify-center sm:justify-start items-start gap-2">
