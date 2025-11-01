@@ -35,19 +35,10 @@ const ContactSection = () => {
         </div>
 
         {/* Right - Map */}
-        <div className="flex justify-center w-full lg:w-[40%]">
-          <a
-            href="https://www.google.com/maps/place/HiLITE+Business+Park/@11.257,75.786,15z"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full"
-          >
-            <img
-              src={mapImage}
-              alt="Axinor Academy Location Map"
-              className="w-full h-[260px] rounded-xl object-cover shadow-md hover:opacity-90 transition duration-300"
-            />
-          </a>
+        <div className="flex justify-center w-full lg:w-[40%] rounded-2xl">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.1892559963344!2d75.83090097402366!3d11.247484050330433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b2adf0f23a7%3A0xeaa072a82e5d541e!2sHiLITE%20Business%20Park%20-%20Tower%202!5e0!3m2!1sen!2sin!4v1761970251470!5m2!1sen!2sin" width="600" height="450" 
+          style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          className="rounded-2xl g:w-[40%] h-[260px]"></iframe>
         </div>
       </div>
 
@@ -67,7 +58,7 @@ const ContactSection = () => {
           </div>
 
           {/* Footer Links Group - Closer to logo */}
-          <div className="flex flex-wrap gap-12 mt-8 lg:mt-0 ml-2">
+          <div className="flex flex-row gap-40 mt-8 lg:mt-0 ml-2">
             {/* Quick Links */}
             <div>
               <h4 className="text-white mb-3 text-[17px] underline decoration-gray-700 underline-offset-4">
