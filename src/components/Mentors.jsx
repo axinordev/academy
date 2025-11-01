@@ -27,7 +27,7 @@ const Mentors = () => {
         const nextScroll = isEnd ? 0 : scrollLeft + clientWidth;
         scrollRef.current.scrollTo({ left: nextScroll, behavior: "smooth" });
       }
-    }, 5000); // 10s pause per card
+    }, 5000); // 5s pause per card
 
     return () => clearInterval(interval);
   }, []);

@@ -56,93 +56,93 @@ const ContactSection = () => {
 
       {/* Footer Section */}
       <footer className="text-gray-300">
-  <div className="flex flex-col lg:flex-row justify-start items-start gap-8 lg:gap-12">
-    {/* Left - Logo and Description */}
-    <div className="flex-1 -ml-6"> {/* shifted logo slightly left */}
-      <img src={logo} alt="Axinor Technologies" className="w-60 mb-5" />
-      <p className="max-w-md text-[15px] leading-relaxed ml-6">
-        A learning initiative by Axinor Technologies – <br />
-        empowering future developers through real-<br />world training and expert mentorship.
-      </p>
-    </div>
+        <div className="flex flex-col lg:flex-row justify-start items-start gap-10 lg:gap-16">
+          {/* Left - Logo and Description */}
+          <div className="flex-1 -ml-4">
+            <img src={logo} alt="Axinor Technologies" className="w-56 mb-4" />
+            <p className="max-w-md text-[15px] leading-relaxed ml-4">
+              A learning initiative by Axinor Technologies – <br />
+              empowering future developers through real-<br />world training and expert mentorship.
+            </p>
+          </div>
 
-    {/* Footer Links Group - Close to logo */}
-    <div className="flex flex-col sm:flex-row gap-16 mt-10 lg:mt-0 ml-4">
+          {/* Footer Links Group - Closer to logo */}
+          <div className="flex flex-wrap gap-12 mt-8 lg:mt-0 ml-2">
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-white mb-3 text-[17px] underline decoration-gray-700 underline-offset-4">
+                Quick Links
+              </h4>
+              <ul className="space-y-2 text-[15px]">
+                <li className="hover:text-pink-400 cursor-pointer">Home</li>
+                <li className="hover:text-pink-400 cursor-pointer">Courses</li>
+                <li className="hover:text-pink-400 cursor-pointer">About Us</li>
+                <li className="hover:text-pink-400 cursor-pointer">Mentors</li>
+              </ul>
+            </div>
 
-      {/* Quick Links */}
-      <div>
-        <h4 className="text-white mb-4 text-[17px] underline decoration-gray-700 underline-offset-4">
-          Quick Links
-        </h4>
-        <ul className="space-y-3 text-[15px]">
-          <li className="hover:text-pink-400 cursor-pointer">Home</li>
-          <li className="hover:text-pink-400 cursor-pointer">Courses</li>
-          <li className="hover:text-pink-400 cursor-pointer">About Us</li>
-          <li className="hover:text-pink-400 cursor-pointer">Mentors</li>
-        </ul>
-      </div>
+            {/* Courses */}
+            <div>
+              <h4 className="text-white mb-3 text-[17px] underline decoration-gray-700 underline-offset-4">
+                Courses
+              </h4>
+              <ul className="space-y-2 text-[15px]">
+                <li className="hover:text-pink-400 cursor-pointer">MERN Stack</li>
+                <li className="hover:text-pink-400 cursor-pointer">Flutter</li>
+                <li className="hover:text-pink-400 cursor-pointer">Cyber Security</li>
+              </ul>
+            </div>
 
-      {/* Courses */}
-      <div>
-        <h4 className="text-white mb-4 text-[17px] underline decoration-gray-700 underline-offset-4">
-          Courses
-        </h4>
-        <ul className="space-y-3 text-[15px]">
-          <li className="hover:text-pink-400 cursor-pointer">MERN Stack</li>
-          <li className="hover:text-pink-400 cursor-pointer">Flutter</li>
-          <li className="hover:text-pink-400 cursor-pointer">Cyber Security</li>
-        </ul>
-      </div>
+            {/* Contact */}
+            <div>
+              <h4 className="text-white mb-3 text-[17px] underline decoration-gray-700 underline-offset-4">
+                Contact
+              </h4>
+              <ul className="space-y-2 text-[15px]">
+                <li className="flex items-start gap-2">
+                  <img src={locationIcon} alt="Location" className="w-4 h-5 opacity-80 mt-1" />
+                  <span>Kozhikode, Kerala</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <img src={phoneIcon} alt="Phone" className="w-5 h-5 opacity-80 mt-1" />
+                  <span>
+                    +91 9746577647 <br /> +91 9446186026
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <img src={mailIcon} alt="Email" className="w-5 h-4 opacity-80 mt-1" />
+                  <span>info@axinoracademy.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      {/* Contact */}
-      <div>
-        <h4 className="text-white mb-4 text-[17px] underline decoration-gray-700 underline-offset-4">
-          Contact
-        </h4>
-        <ul className="space-y-3 text-[15px]">
-          <li className="flex items-center gap-2">
-            <img src={locationIcon} alt="Location" className="w-4 h-6 opacity-80" />
-            <span>Kozhikode, Kerala</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <img src={phoneIcon} alt="Phone" className="w-5 h-5 opacity-80" />
-            <span>+91 9746577647<br/> +91 9446186026</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <img src={mailIcon} alt="Email" className="w-5 h-4 opacity-80" />
-            <span>info@axinoracademy.com</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+        {/* Divider */}
+        <div className="border-t border-gray-700 my-8"></div>
 
-  {/* Divider */}
-  <div className="border-t border-gray-700 my-8"></div>
+        {/* Bottom Row */}
+        <div className="flex flex-col sm:flex-row justify-between items-center text-[14px] text-gray-400 gap-4 text-left">
+          {/* Left - Social Icons */}
+          <div className="flex items-center gap-4">
+            <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5 hover:opacity-80 cursor-pointer" />
+            <img src={instaIcon} alt="Instagram" className="w-5 h-5 hover:opacity-80 cursor-pointer" />
+            <img src={fbIcon} alt="Facebook" className="w-5 h-5 hover:opacity-80 cursor-pointer" />
+          </div>
 
-  {/* Bottom Row */}
-  <div className="flex flex-col sm:flex-row justify-between items-center text-[14px] text-gray-400 gap-4 text-left">
-    {/* Left - Social Icons */}
-    <div className="flex items-center gap-4">
-      <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5 hover:opacity-80 cursor-pointer" />
-      <img src={instaIcon} alt="Instagram" className="w-5 h-5 hover:opacity-80 cursor-pointer" />
-      <img src={fbIcon} alt="Facebook" className="w-5 h-5 hover:opacity-80 cursor-pointer" />
-    </div>
+          {/* Center - Copyright */}
+          <p className="text-center text-gray-400">
+            © 2025 Axinor Academy. All rights reserved.
+          </p>
 
-    {/* Center - Copyright */}
-    <p className="text-center text-gray-400">
-      © 2025 Axinor Academy. All rights reserved.
-    </p>
-
-    {/* Right - Terms & Privacy */}
-    <div className="flex gap-3 sm:gap-4">
-      <span className="hover:text-pink-400 cursor-pointer">
-        Terms & Condition / Privacy Policy
-      </span>
-    </div>
-  </div>
-</footer>
-
+          {/* Right - Terms & Privacy */}
+          <div className="flex gap-3 sm:gap-4">
+            <span className="hover:text-pink-400 cursor-pointer">
+              Terms & Condition / Privacy Policy
+            </span>
+          </div>
+        </div>
+      </footer>
     </section>
   );
 };
