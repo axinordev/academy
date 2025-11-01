@@ -66,22 +66,25 @@ const FeaturedCourses = () => {
         </div>
 
         {/* Course Cards */}
-        <div
-          className="
-            grid 
-            grid-cols-1 
-            sm:grid-cols-2 
-            lg:grid-cols-3 
-            gap-8 
-            justify-start
-            items-start
-            ml-4
-          "
-        >
+       <div
+  className="
+    grid 
+    grid-cols-1 
+    sm:grid-cols-2 
+    lg:grid-cols-3 
+    gap-8 
+    justify-start
+    items-start
+    md:ml-4
+  "
+>
           {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl border border-[#C7DDF4] transition p-4 w-[385px] h-[400px] flex flex-col justify-between opacity-80 hover:opacity-100 hover:shadow-lg duration-200"
+              className="bg-white rounded-2xl border border-[#C7DDF4] transition p-4 
+                         w-full sm:w-[340px] md:w-[360px] lg:w-[389px] 
+                         h-auto flex flex-col justify-between 
+                         opacity-80 hover:opacity-100 hover:shadow-lg duration-200 mx-auto sm:mx-0"
             >
               {/* Course Image */}
               <img

@@ -8,10 +8,12 @@ import wm from '../assets/images/woman-lap.jpeg';
 
 const HeroSection = () => {
   return (
-    <section
+   <section
   id="hero"
-  className="bg-cover bg-center bg-no-repeat min-h-screen flex items-start md:items-center justify-start font-['Poppins']"
+  className="min-h-screen flex items-start md:items-center justify-start font-['Poppins'] bg-[#F3F6F9] md:bg-transparent relative overflow-hidden"
 >
+
+
 
       <img
         src={bg2}
